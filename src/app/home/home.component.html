@@ -1,0 +1,13 @@
+<p>
+  home works!
+</p>
+
+<owl-carousel
+     [options]="{items: 1, dots: false, navigation: false}"
+     [items]="images"
+     [carouselClasses]="['owl-theme', 'row', 'sliding']">
+     <div class="item" *ngFor="let image of images;let i = index">
+       <h2>{{image.title}}</h2>
+         <!-- <div class="thumbnail-image" [ngStyle]="{'background': 'url() no-repeat scroll center center / 80px 80px'}"></div> -->
+     </div>
+ </owl-carousel>
