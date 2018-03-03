@@ -10,11 +10,13 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 
 import { OwlModule } from 'ngx-owl-carousel';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
