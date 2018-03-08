@@ -1,5 +1,5 @@
 <owl-carousel
-     [options]="{items: 1, dots: false, navigation: false}"
+     [options]="{items: 1, dots: false, navigation: false, autoplay: false, autoplayTimeout: 10000, loop: true}"
      [items]="images"
      [carouselClasses]="['owl-theme', 'row', 'sliding']">
      <div class="project" *ngFor="let image of images;let i = index" [attr.data-bg]="image.title">
@@ -7,22 +7,40 @@
        <img class="project-img" [src]="image.img" alt="">
          <!-- <div class="thumbnail-image" [ngStyle]="{'background': 'url() no-repeat scroll center center / 80px 80px'}"></div> -->
         <div class="project-meta">
-          <h2>{{image.title}}</h2>
+          <h2 class="h4">{{image.title}}</h2>
           <div class="project-meta__inner">
-            <div>
-                <h3>Company</h3>
+              <div>
+                <h3 class="h5">Company</h3>
                 <span>{{image.company}}</span>
               </div>
               <div>
-                <h3>Role</h3>
+                <h3 class="h5">Role</h3>
                 <span>{{image.role}}</span>
               </div>
               <div>
-                <h3>Client</h3>
+                <h3 class="h5">Client</h3>
                 <span>{{image.client}}</span>
-                {{image.role}}
+              </div>
+              <div>
+                <a class="btn btn-primary">bekijk project</a>
               </div>
           </div>
         </div>
       </div>
  </owl-carousel>
+
+ <div class="cus-owl-nav cus-owl-nav-prev">
+  <svg height="50" width="50">
+    <circle cx="25" cy="25" r="20" stroke="rgba(255,255,255, .24)" stroke-width="2" fill="transparent" />
+  </svg>
+  <i class="fas fa-long-arrow-alt-left"></i>
+ </div>
+
+ <div class="cus-owl-nav cus-owl-nav-next">
+  <svg height="50" width="50">
+    <circle cx="25" cy="25" r="20" stroke="rgba(255,255,255, .24)" stroke-width="2" fill="transparent" />
+    <circle cx="25" cy="25" r="20" stroke="white" stroke-width="2" fill="transparent" />
+  </svg>
+  <i class="fas fa-long-arrow-alt-right"></i>
+ </div>
+

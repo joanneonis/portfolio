@@ -1,0 +1,18 @@
+
+$btn-colors: (
+    "primary": (
+        color: color(primary, 500),
+    ),
+);
+
+@each $person-name, $person-details in $btn-colors {
+  $color: map-get($person-details, 'color');
+
+  .btn-#{$person-name} {
+    background-color: $color;
+
+    &:hover{
+      background-color: lighten($color, 8%);
+    }
+  }
+}

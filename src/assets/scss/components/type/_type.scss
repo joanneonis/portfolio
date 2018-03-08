@@ -4,6 +4,6 @@ body, html{
   font-family: $body-font;
 }
 
-@include h{
-  font-family: $heading-font;
+.type{
+  margin-bottom: 0;
 }

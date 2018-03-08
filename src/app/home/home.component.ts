@@ -13,6 +13,22 @@ export class HomeComponent implements OnInit {
       company: 'Avans University of Applied Sciences',
       role: 'Concept, Design, Frontend, Teamleader',
       client: 'Noordbrabants museum',
+    },
+    {
+      title: 'Uncover',
+      img: './assets/img/work/mockup-uncover.png',
+      bg: './assets/img/work/bg-uncover-2.png',
+      company: 'Avans University of Applied Sciences',
+      role: 'Concept, Design, Frontend, Teamleader',
+      client: 'Noordbrabants museum',
+    },
+    {
+      title: 'Uncover',
+      img: './assets/img/work/mockup-uncover.png',
+      bg: './assets/img/work/bg-uncover-2.png',
+      company: 'Avans University of Applied Sciences',
+      role: 'Concept, Design, Frontend, Teamleader',
+      client: 'Noordbrabants museum',
     }
   ];
 
