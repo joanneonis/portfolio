@@ -1,4 +1,9 @@
 
+body, html{
+  color: white;
+  font-family: $body-font;
+}
+
 @include h{
   font-family: $heading-font;
 }

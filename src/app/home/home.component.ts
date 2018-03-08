@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   images = [
     {
-      title: 'test',
-      img: 'test'
-    },
-    {
-      title: 'test2',
-      img: 'test'
-    },
+      title: 'Uncover',
+      img: './assets/img/work/mockup-uncover.png',
+      bg: './assets/img/work/bg-uncover-2.png',
+      company: 'Avans University of Applied Sciences',
+      role: 'Concept, Design, Frontend, Teamleader',
+      client: 'Noordbrabants museum',
+    }
   ];
 
   constructor() { }
