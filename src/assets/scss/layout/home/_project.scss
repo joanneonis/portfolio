@@ -38,12 +38,12 @@
   }
 
   &-meta{
-    @include abs(auto, 20px, 40px, 20px);
+    @include abs(auto, 20px, 30px, 20px);
 
     &__inner{
       display: flex;
       margin-top: 12px;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
      div > div {
@@ -53,6 +53,8 @@
         align-self: flex-end;
         text-align: right;
         flex: 5;
+        padding-right: 0;
+        padding-top: 10px;
       }
     }
 
