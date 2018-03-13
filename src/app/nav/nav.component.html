@@ -7,12 +7,28 @@
   <h2>Frontend developer</h2>
 </div>
 
-<div class="nav-menu__toggle" (click)="navOpen = !navOpen" >
+<div class="nav-menu__toggle" (click)="open()" >
     <div [ngClass]="navOpen ? 'active' : 'passive'" class="nav-menu__icon"></div>
 </div>
 
 <div class="nav-menu__overlay">
   <div class="nav-menu__overlay__inner">
 
+  </div>
+  <div class="nav-menu__bg">
+    <svg #bg version="1.1" id="bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 1440 1024" style="enable-background:new 0 0 1440 1024;" xml:space="preserve">
+    <style type="text/css">
+      .st0{fill:#429EFF;}
+    </style>
+
+    <path class="st0" id="step0" d="M1439,1024c0,0,0-0.2,0.2-0.3c0.2-0.1,0.2-0.1,0.3-0.3s0.3-0.3,0.4-0.3h0.1v0.8H1439z"/>
+    <path id="step1" opacity="0" class="st0" d="M1061,1024c0,0,8.7-69.7,82.1-99c73.4-29.2,60.7-41.4,103-123.5s124.8-97.1,159.9-96.2h33.9V1024H1061z"/>
+    <path id="step2" opacity="0" class="st0" d="M335.1,1024c0,0,4.1-91.7,41.9-319c46-277,282-331,497.9-329.6C1144.2,377.2,1241.5-2.7,1344,0h96v1024H335.1z"
+    />
+    <path id="step3" opacity="0" class="st0" d="M-421,1024c0,0-176.6-384.4,184-528s-109.6-631.5,344-622c286,6,993.8,65.4,1166.5,70H1440v1080H-421z"/>
+
+
+  </svg>
   </div>
 </div>
