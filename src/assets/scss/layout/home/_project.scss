@@ -21,6 +21,7 @@
     text-align: center;
     color: color(primary, 600);
     z-index: 0;
+    letter-spacing: -1.07vw;
 
     @include bp(1100px){
       font-size: 18em;
@@ -39,20 +40,19 @@
 
   &-meta{
     @include abs(auto, 20px, 30px, 20px);
+    z-index: 20;
 
     &__inner{
-      display: flex;
       margin-top: 12px;
-      justify-content: space-between;
     }
 
      div > div {
       padding-right: 60px;
+      max-width: 230px;
+      float: left;
 
       &:last-of-type{
-        align-self: flex-end;
-        text-align: right;
-        flex: 5;
+        float: right;
         padding-right: 0;
         padding-top: 10px;
       }

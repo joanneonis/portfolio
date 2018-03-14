@@ -11,6 +11,7 @@ declare var mina: any;
 export class NavComponent implements OnInit {
   @ViewChild('bg') bg: ElementRef;
   navOpen = false;
+  s = Snap(document.getElementById('bg'));
 
   constructor() { }
 
@@ -19,37 +20,44 @@ export class NavComponent implements OnInit {
   }
 
   open() {
-    const svg = document.getElementById('bg');
-    const s = Snap(svg);
-
+    const mask = Snap.select('#mask');
     const step0 = Snap.select('#step0');
     const step1 = Snap.select('#step1');
     const step2 = Snap.select('#step2');
     const step3 = Snap.select('#step3');
+    const step9 = Snap.select('#step9');
 
     const step0points = step0.node.getAttribute('d');
     const step1points = step1.node.getAttribute('d');
     const step2points = step2.node.getAttribute('d');
     const step3points = step3.node.getAttribute('d');
+    const step9points = step9.node.getAttribute('d');
 
-    const toStep1 = function() {
-      step0.animate({ d: step1points }, 500, mina.linear, toStep2);
-    };
+    if (!this.navOpen) {
+      const toStep1 = function() {
+        step0.animate({ d: step1points }, 350, mina.linear, toStep2);
+      };
 
-    const toStep2 = function() {
-      step0.animate({ d: step2points }, 500, mina.linear, toStep3);
-    };
+      const toStep2 = function() {
+        step0.animate({ d: step2points }, 350, mina.linear, toStep3);
+      };
 
-    const toStep3 = function() {
-      step0.animate({ d: step3points }, 420, mina.linear, back);
-    };
+      const toStep3 = function() {
+        step0.animate({ d: step3points }, 270, mina.linear);
+      };
+      toStep1();
 
-    const back = function() {
-      step0.animate({ d: step0points }, 420, mina.linear);
-    };
+    } else {
+      const toStep1 = function() {
+        step0.animate({ d: step2points }, 150, mina.linear, back);
+      };
+      const back = function() {
+        step0.animate({ d: step9points }, 170, mina.linear);
+      };
+      toStep1();
+    }
 
-    toStep1();
-    this.navOpen = true;
+    this.navOpen = !this.navOpen;
   }
 
 }

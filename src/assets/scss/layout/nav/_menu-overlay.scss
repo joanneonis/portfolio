@@ -1,0 +1,147 @@
+
+.nav-menu__overlay{
+  background-color: color(primary, 500);
+  @include fxd(0);
+  height: 100vh;
+  width: 100vw;
+  z-index: 60;
+  -webkit-clip-path: url(#maskRect1);
+}
+
+.nav-menu__bg{
+  @include fxd(0);
+  height: 100vh;
+  width: 100vw;
+  z-index: 50;
+
+  svg{
+    @include fxd(0);
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.nav-menu__content{
+  @include fxd(0);
+  height: 100vh;
+  width: 100vw;
+  z-index: 60;
+
+  &.active{
+
+  }
+
+  &__inner{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 25px;
+    max-width: 1200px;
+
+
+    & > div:nth-child(1) {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+
+      a{
+        font-family: $heading-font;
+        font-size: 2.5em;
+      }
+    }
+
+    & > div:nth-child(2) {
+      flex: 2;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.nav-menu__list {
+
+  li {
+    padding: 10px 0;
+  }
+}
+
+.nav-menu__social {
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 9px;
+  }
+}
+
+
+
+a[data-coming-up="true"] {
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17);
+  }
+  &:after{
+    content: "(word nog ontwikkeld)";
+    font-size: .5em;
+    float: left;
+    clear: both;
+    font-family: $body-font;
+    font-weight: 300;
+  }
+}
+
+.nav-menu__work {
+  li {
+    padding: 15px 45px 0 0;
+    width: 50%;
+    float: left;
+  }
+  a {
+    background-image: url('/assets/img/menu.png');
+    background-size: cover;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .image {
+    margin-bottom: -40px;
+    margin-left: -20px;
+    margin-right: 10px;
+
+    img {
+      width: 10vw;
+      height: auto;
+    }
+  }
+  .content{
+    font-family: $heading-font;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: -10px;
+    margin-right: 50px;
+  }
+}

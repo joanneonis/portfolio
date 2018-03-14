@@ -11,24 +11,83 @@
     <div [ngClass]="navOpen ? 'active' : 'passive'" class="nav-menu__icon"></div>
 </div>
 
-<div class="nav-menu__overlay">
-  <div class="nav-menu__overlay__inner">
-
+<div class="nav-menu__overlay" [ngClass]="navOpen ? 'active' : 'passive'">
+  <div class="nav-menu__content">
+    <div class="nav-menu__content__inner">
+      <div>
+        <div></div>
+          <ul class="nav-menu__list">
+              <li><a>Home</a></li>
+              <li><a>Over mij</a></li>
+              <li><a data-coming-up="true">Playground</a></li>
+            </ul>
+            <ul class="nav-menu__social">
+              <li><a><i class="fab fa-dribbble"></i></a></li>
+              <li><a><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a><i class="fas fa-at"></i></a></li>
+            </ul>
+      </div>
+      <div class="nav-menu__work">
+          <ul>
+            <li>
+              <a>
+                <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
+                <span class="content">Uncover</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
+                <span class="content">Heilersig</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="image"><img src="./assets/img/work/thumbs/jij.png" alt=""></span>
+                <span class="content">Jij</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="image"><img src="./assets/img/work/thumbs/marie.png" alt=""></span>
+                <span class="content">Marie</span>
+              </a>
+            </li>
+            <li>
+                <a>
+                  <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
+                  <span class="content">Uncover</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
+                  <span class="content">Heilersig</span>
+                </a>
+              </li>
+          </ul>
+      </div>
+    </div>
   </div>
   <div class="nav-menu__bg">
-    <svg #bg version="1.1" id="bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <svg preserveAspectRatio="none" #bg version="1.1" id="bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 1440 1024" style="enable-background:new 0 0 1440 1024;" xml:space="preserve">
     <style type="text/css">
-      .st0{fill:#429EFF;}
+      .st0{fill:#29329F;}
     </style>
 
-    <path class="st0" id="step0" d="M1439,1024c0,0,0-0.2,0.2-0.3c0.2-0.1,0.2-0.1,0.3-0.3s0.3-0.3,0.4-0.3h0.1v0.8H1439z"/>
+
     <path id="step1" opacity="0" class="st0" d="M1061,1024c0,0,8.7-69.7,82.1-99c73.4-29.2,60.7-41.4,103-123.5s124.8-97.1,159.9-96.2h33.9V1024H1061z"/>
     <path id="step2" opacity="0" class="st0" d="M335.1,1024c0,0,4.1-91.7,41.9-319c46-277,282-331,497.9-329.6C1144.2,377.2,1241.5-2.7,1344,0h96v1024H335.1z"
     />
     <path id="step3" opacity="0" class="st0" d="M-421,1024c0,0-176.6-384.4,184-528s-109.6-631.5,344-622c286,6,993.8,65.4,1166.5,70H1440v1080H-421z"/>
+    <path id="step9" opacity="0" d="M1439,1024c0,0,0-0.2,0.2-0.3c0.2-0.1,0.2-0.1,0.3-0.3s0.3-0.3,0.4-0.3h0.1v0.8H1439z"/>
 
-
+    <defs>
+        <clipPath id="maskRect1" >
+          <path id="step0" d="M1439,1024c0,0,0-0.2,0.2-0.3c0.2-0.1,0.2-0.1,0.3-0.3s0.3-0.3,0.4-0.3h0.1v0.8H1439z" />
+        </clipPath>
+      </defs>
   </svg>
   </div>
 </div>

@@ -7,7 +7,9 @@ html, body {
   padding: 0;
   background-color: #313334;
 }
-
+body > svg {
+  display: none;
+}
 
 @import 'settings/colors';
 @import 'settings/type';

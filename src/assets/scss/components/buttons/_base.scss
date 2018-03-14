@@ -1,31 +1,31 @@
 
 %button-reset{
- overflow: visible;
- padding: 0;
- background: none;
- color: inherit;
- font: inherit;
- line-height: normal;
- border: 0;
- outline: none !important;
- cursor: pointer;
- -webkit-appearance: button; /* for input */
- user-select: none;
+  overflow: visible;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  border: 0;
+  outline: none !important;
+  -webkit-appearance: button; /* for input */
+  user-select: none;
 }
 
 .btn{
- display: inline-block;
- position: relative;
- font-family: $body-font;
- text-align: center;
- text-decoration: none;
- transition: transform .1s ease-in-out, background .2s ease-in-out;
+  display: inline-block;
+  position: relative;
+  font-family: $body-font;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .1s ease-in-out, background .2s ease-in-out;
 
- @extend h5;
+  @extend h5;
 
- background: color(primary, 500);
- padding: 12px 25px;
- white-space: nowrap;
- border-radius: 80px;
- font-size: 0.9em;
+  background: color(primary, 500);
+  padding: 12px 25px;
+  white-space: nowrap;
+  border-radius: 80px;
+  font-size: 0.9em;
+  letter-spacing: 4.86px;
 }
