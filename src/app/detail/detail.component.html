@@ -1,7 +1,7 @@
 
 <header class="header">
   <div class="header__inner">
-    <div class="header-img">
+    <div class="header-img" [attr.data-title]="image[0].title">
       <img src="./assets/img/work/mockup-uncover.png" alt="">
     </div>
     <div class="header-details project-meta">
@@ -55,6 +55,11 @@
 <br><br>
 Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden.
   </p>
+
+  <figure>
+      <img src="./assets/img/work/uncover-mockup-1.png" alt="">
+    </figure>
+
 
   <owl-carousel
      [options]="carouselOptions"

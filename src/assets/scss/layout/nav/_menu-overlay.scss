@@ -27,20 +27,30 @@
   width: 100vw;
   z-index: 60;
 
+  @include bp(600px, max){
+    overflow-y: auto;
+  }
+
   &.active{
 
   }
 
   &__inner{
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 25px;
     max-width: 1200px;
+    padding: 90px 25px;
+    display: flex;
+    flex-flow: column;
+
+    @include bp(600px){
+      flex-flow: row;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      padding: 0 25px;
+    }
 
 
     & > div:nth-child(1) {
@@ -48,6 +58,10 @@
       display: flex;
       flex-flow: column;
       justify-content: space-between;
+
+      @include bp(600px, max){
+        margin-bottom: 40px;
+      }
 
       a{
         font-family: $heading-font;
@@ -65,6 +79,10 @@
       list-style: none;
       padding: 0;
       margin: 0;
+
+      @include bp(600px, max){
+        text-align: center;
+      }
     }
   }
 }
@@ -77,10 +95,28 @@
 }
 
 .nav-menu__social {
+  display: none;
+
+  @include bp(600px){
+    display: block;
+  }
+
   li {
     display: inline-block;
     margin-right: 10px;
     font-size: 9px;
+
+    @include bp(600px, max){
+      font-size: 20px;
+    }
+  }
+
+  &__small{
+    display: block;
+
+    @include bp(600px){
+      display: none;
+    }
   }
 }
 
@@ -104,22 +140,32 @@ a[data-coming-up="true"] {
   &:after{
     content: "(word nog ontwikkeld)";
     font-size: .5em;
-    float: left;
-    clear: both;
     font-family: $body-font;
     font-weight: 300;
+    display: block;
+
+    @include bp(600px){
+      float: left;
+      clear: both;
+      display: inline-block;
+    }
   }
 }
 
 .nav-menu__work {
   li {
-    padding: 15px 45px 0 0;
-    width: 50%;
-    float: left;
+    padding: 0;
+    padding-bottom: 25px;
+
+    @include bp(600px){
+      width: 50%;
+      float: left;
+      padding: 15px 45px 0 0;
+    }
   }
   a {
     background-size: cover;
-    display: inline-block;
+    display: inane-block;
     width: 100%;
     margin-bottom: 18px;
     position: relative;
@@ -133,7 +179,7 @@ a[data-coming-up="true"] {
     background-color: rgba(black, 0);
 
     &:hover{
-      background-color: rgba(black, .5);
+      background-color: rgba(black, .3);
     }
 
     &:after{
@@ -149,8 +195,12 @@ a[data-coming-up="true"] {
     margin-right: 10px;
 
     img {
-      width: 10vw;
+      width: 35vw;
       height: auto;
+
+      @include bp(600px){
+        width: 10vw;
+      }
     }
   }
   .content{

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 // import * as Snap from 'snapsvg';
 // import Snap, { mina } from 'snapsvg-cjs';
@@ -10,9 +10,11 @@ declare var mina: any;
   templateUrl: './nav.component.html',
 })
 export class NavComponent implements OnInit {
+  @Output() navOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   @ViewChild('bg') bg: ElementRef;
-  navOpen = false;
   s = Snap(document.getElementById('bg'));
+  isNavOpen = false;
 
   constructor(private router: Router) { }
 
@@ -34,7 +36,7 @@ export class NavComponent implements OnInit {
     const step3points = step3.node.getAttribute('d');
     const step9points = step9.node.getAttribute('d');
 
-    if (!this.navOpen) {
+    if (!this.isNavOpen) {
       const toStep1 = function() {
         step0.animate({ d: step1points }, 350, mina.linear, toStep2);
       };
@@ -47,7 +49,7 @@ export class NavComponent implements OnInit {
         step0.animate({ d: step3points }, 270, mina.linear);
       };
       toStep1();
-
+      this.navOpen.emit(true);
     } else {
       const toStep1 = function() {
         step0.animate({ d: step2points }, 150, mina.linear, back);
@@ -56,14 +58,15 @@ export class NavComponent implements OnInit {
         step0.animate({ d: step9points }, 170, mina.linear);
       };
       toStep1();
+      this.navOpen.emit(false);
     }
 
-    this.navOpen = !this.navOpen;
+     this.isNavOpen = !this.isNavOpen;
   }
 
-  goto() {
+  goto(e) {
     console.log('object');
-    this.router.navigate(['detail']);
+    this.router.navigate([e]);
 
     setTimeout(() => {
       this.open();

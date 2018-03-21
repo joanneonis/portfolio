@@ -1,4 +1,4 @@
-
+<!--
 <div id="heading-container">
 
   <div class="headings">
@@ -23,5 +23,40 @@
     <br>
 
   </div>
+
+</div> -->
+
+<!-- <div class="tile js-tilt" data-tilt><div class="inner">Hover me</div></div> -->
+
+<div>
+    <div class="project" [attr.data-bg]="images[0].title">
+        <div class="project-bg" [ngStyle]="{'background-image': 'url('+images[0].bg+')'}" ></div>
+
+        <div class="tilt-effect" data-tilt>
+            <h1>{{images[0].title}}</h1>
+            <img class="project-img" [src]="images[0].img" alt="">
+        </div>
+          <!-- <div class="thumbnail-image" [ngStyle]="{'background': 'url() no-repeat scroll center center / 80px 80px'}"></div> -->
+         <div class="project-meta">
+           <h2 class="h4">{{images[0].title}}</h2>
+           <div class="project-meta__inner">
+               <div>
+                 <h3 class="h5">Company</h3>
+                 <span>{{images[0].company}}</span>
+               </div>
+               <div>
+                 <h3 class="h5">Role</h3>
+                 <span>{{images[0].role}}</span>
+               </div>
+               <div>
+                 <h3 class="h5">Client</h3>
+                 <span>{{images[0].client}}</span>
+               </div>
+               <div>
+                 <a class="btn btn-primary">bekijk project</a>
+               </div>
+           </div>
+         </div>
+       </div>
 
 </div>

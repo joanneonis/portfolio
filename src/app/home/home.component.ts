@@ -1,9 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { OwlCarousel } from 'ngx-owl-carousel';
+import 'tilt.js';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('owlElement') owlElement: OwlCarousel;
@@ -17,6 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     autoplayTimeout: 10000,
     loop: true,
     onTranslated: this.onChange.bind(this),
+    onInitialized: this.tilt.bind(this)
   };
 
   images = [
@@ -69,6 +73,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
      // const target: Element = document.getElementById('owl-stage');
     // observer.observe(target, { attributes : true, attributeFilter : ['style'] });
+
+    // $('.tilt-effect').tilt({
+    //   glare: false,
+    //   maxTilt: 5,
+    //   maxGlare: 0.05,
+    //   speed: 1000,
+    //   perspective: 1500
+    // });
   }
 
   ngAfterViewInit() {
@@ -92,6 +104,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const matrix = new WebKitCSSMatrix(window.getComputedStyle(el).webkitTransform);
    // console.log(window.getComputedStyle(el).transform);
     console.log('translateX: ', matrix.m41);
+  }
+
+  tilt() {
+    $('.tilt-effect').each(function(i, obj) {
+      $(this).tilt({
+        glare: false,
+        maxTilt: 5,
+        maxGlare: 0.05,
+        speed: 1000,
+        perspective: 1500
+      });
+    });
   }
 
 }

@@ -4,8 +4,14 @@
      id="owlcontainer"
      [carouselClasses]="['owl-theme', 'row', 'sliding']" #owlElement>
      <div class="project" *ngFor="let image of images;let i = index" [attr.data-bg]="image.title">
-       <div class="project-bg" [ngStyle]="{'background-image': 'url('+image.bg+')'}" ></div>
-       <img class="project-img" [src]="image.img" alt="">
+       <!-- <div class="project-bg" [ngStyle]="{'background-image': 'url('+image.bg+')'}" ></div> -->
+       <!-- <img class="project-img" [src]="image.img" alt=""> -->
+
+       <div class="tilt-effect" data-tilt>
+          <h1>{{image.title}}</h1>
+          <img class="project-img" [src]="image.img" alt="">
+      </div>
+
          <!-- <div class="thumbnail-image" [ngStyle]="{'background': 'url() no-repeat scroll center center / 80px 80px'}"></div> -->
         <div class="project-meta">
           <h2 class="h4">{{image.title}}</h2>
@@ -23,7 +29,7 @@
                 <span>{{image.client}}</span>
               </div>
               <div>
-                <a class="btn btn-primary">bekijk project</a>
+                <a [routerLink]="'/detail'" class="btn btn-primary">bekijk project</a>
               </div>
           </div>
         </div>

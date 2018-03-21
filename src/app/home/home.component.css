@@ -1,0 +1,58 @@
+
+.tilt-effect{
+  transform-style: preserve-3d;
+}
+
+.tilt-effect img{
+  transform: translateZ(20px);
+}
+
+.tilt-effect h1{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateZ(-250px);
+  font-size: 21vw;
+  color: #262C75;
+
+
+  font-family: "baron_neueblack", serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: inline-block;
+  font-size: 20vw;
+  height: 20vw;
+  text-align: center;
+  color: #262C75;
+  z-index: 0;
+  letter-spacing: -1.07vw;
+}
+
+.tilt-effect {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.project:after, .header-img:after{
+  display: none;
+}
+
+.project{
+  background-image: url(/assets/img/work/bg-uncover-2.png);
+}
+
+
+.project {
+  transform: translate3d(0, 0px, 0px);
+}

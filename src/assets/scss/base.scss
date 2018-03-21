@@ -13,7 +13,19 @@ body > svg {
 
 body {
   width: 100vw;
+  overflow: hidden;
+}
+
+.main-container{
+  overflow: auto;
+  width: 100%;
+  position: relative;
+  height: 100vh;
   overflow-x: hidden;
+
+  &.nav-open{
+    overflow: hidden;
+  }
 }
 
 @import 'settings/colors';

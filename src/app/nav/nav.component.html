@@ -8,16 +8,16 @@
 </div>
 
 <div class="nav-menu__toggle" (click)="open()" >
-    <div [ngClass]="navOpen ? 'active' : 'passive'" class="nav-menu__icon"></div>
+    <div [ngClass]="isNavOpen ? 'active' : 'passive'" class="nav-menu__icon"></div>
 </div>
 
-<div class="nav-menu__overlay" [ngClass]="navOpen ? 'active' : 'passive'">
+<div class="nav-menu__overlay" [ngClass]="isNavOpen ? 'active' : 'passive'">
   <div class="nav-menu__content">
     <div class="nav-menu__content__inner">
       <div>
         <div></div>
           <ul class="nav-menu__list">
-              <li><a [routerLink]="'/'">Home</a></li>
+              <li><a (click)="goto('/')">Home</a></li>
               <li><a>Over mij</a></li>
               <li><a data-coming-up="true">Playground</a></li>
             </ul>
@@ -30,43 +30,48 @@
       <div class="nav-menu__work">
           <ul>
             <li>
-              <a (click)="goto()">
+              <a (click)="goto('/detail')">
                 <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
                 <span class="content">Uncover</span>
               </a>
             </li>
             <li>
-              <a [routerLink]="'/detail'">
+              <a>
                 <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
                 <span class="content">Heilersig</span>
               </a>
             </li>
             <li>
-              <a [routerLink]="'/detail'">
+              <a>
                 <span class="image"><img src="./assets/img/work/thumbs/jij.png" alt=""></span>
                 <span class="content">Jij</span>
               </a>
             </li>
             <li>
-              <a [routerLink]="'/detail'">
+              <a>
                 <span class="image"><img src="./assets/img/work/thumbs/marie.png" alt=""></span>
                 <span class="content">Marie</span>
               </a>
             </li>
             <li>
-                <a [routerLink]="'/detail'">
+                <a>
                   <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
                   <span class="content">Uncover</span>
                 </a>
               </li>
               <li>
-                <a [routerLink]="'/detail'">
+                <a>
                   <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
                   <span class="content">Heilersig</span>
                 </a>
               </li>
           </ul>
       </div>
+      <ul class="nav-menu__social nav-menu__social__small">
+        <li><a><i class="fab fa-dribbble"></i></a></li>
+        <li><a><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a><i class="fas fa-at"></i></a></li>
+      </ul>
     </div>
   </div>
   <div class="nav-menu__bg">
