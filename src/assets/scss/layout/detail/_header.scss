@@ -35,6 +35,7 @@
         display: flex;
       }
       & > div{
+        display: block;
         float: none;
       }
 
@@ -88,14 +89,14 @@
 
     padding: 0;
     position: absolute;
-    width: 25vw;
+    width: 40vw;
     left: 4vw;
     margin-top: -7vw;
     text-align: right;
     padding-right: 15px;
   }
   @include bp(1280px){
-    left: 8vw;
+    left: -7vw;
   }
 
   img {
@@ -104,5 +105,11 @@
     height: auto;
     position: relative;
     z-index: 2;
+  }
+
+  &[type="mobile"]{
+    @include bp(1280px){
+      left: -2.5vw;
+    }
   }
 }

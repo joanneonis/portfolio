@@ -13,6 +13,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { NavComponent } from './nav/nav.component';
 import { HeadingsComponent } from './headings/headings.component';
 import { DetailComponent } from './detail/detail.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailComponent } from './detail/detail.component';
     HomeComponent,
     NavComponent,
     HeadingsComponent,
-    DetailComponent
+    DetailComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

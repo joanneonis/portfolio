@@ -4,6 +4,10 @@
   left: $main-sides;
   z-index: 10;
 
+  @include bp(600px, max){
+    left: $main-sides-xs;
+  }
+
   span {
     display: none;
 

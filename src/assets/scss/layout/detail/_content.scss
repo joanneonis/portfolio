@@ -1,6 +1,8 @@
 
 .project-content{
   padding-top: 40px;
+  background: #fff;
+  color: #4a4a4a;
 
   @include bp(600px, max){
     padding: 30px;

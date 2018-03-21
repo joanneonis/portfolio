@@ -16,6 +16,10 @@
   width: 3em;
   text-align: center;
 
+  @include bp(600px, max){
+      left: $main-sides-xs;
+  }
+
   .svg-inline--fa{
     position: absolute;
     top: 19px;
@@ -27,6 +31,10 @@
 .cus-owl-nav-next {
   right: $main-sides;
   left: auto;
+
+  @include bp(600px, max){
+    right: $main-sides-xs;
+}
 
   circle:nth-child(2) {
     stroke-dasharray: 125;

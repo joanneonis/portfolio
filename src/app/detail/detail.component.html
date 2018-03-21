@@ -1,8 +1,8 @@
 
 <header class="header">
   <div class="header__inner">
-    <div class="header-img" [attr.data-title]="image[0].title">
-      <img src="./assets/img/work/mockup-uncover.png" alt="">
+    <div [attr.type]="image[0].type" class="header-img" [attr.data-title]="image[0].title">
+      <img [src]="image[0].img" alt="">
     </div>
     <div class="header-details project-meta">
       <h2 class="h2">{{image[0].title}}</h2>
@@ -61,7 +61,7 @@ Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest ins
     </figure>
 
 
-  <owl-carousel
+  <!-- <owl-carousel
      [options]="carouselOptions"
      [items]="images"
      class="owl-work"
@@ -70,6 +70,6 @@ Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest ins
         <img [src]="image.img" alt="">
       </div>
       <div></div>
- </owl-carousel>
+ </owl-carousel> -->
   </div>
 </section>
