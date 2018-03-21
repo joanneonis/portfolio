@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 import { OwlCarousel } from 'ngx-owl-carousel';
 import 'tilt.js';
 import * as $ from 'jquery';
+import { ProjectsService } from '../projects.service';
 
 @Component({
   selector: 'app-home',
@@ -23,44 +24,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     onInitialized: this.tilt.bind(this)
   };
 
-  images = [
-    {
-      title: 'Uncover',
-      img: './assets/img/work/mockup-uncover.png',
-      bg: './assets/img/work/bg-uncover-2.png',
-      company: 'Avans University of Applied Sciences',
-      role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Noordbrabants museum',
-    },
-    {
-      title: 'Willeke',
-      img: './assets/img/work/mockup-marie.png',
-      bg: './assets/img/work/bg-uncover-2.png',
-      company: 'Avans University of Applied Sciences',
-      role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Marie Willeke',
-    },
-    {
-      title: 'Heilersig',
-      img: './assets/img/work/mockup-heilersig.png',
-      bg: './assets/img/work/bg-uncover-2.png',
-      company: 'Freelance',
-      role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Studie',
-    },
-    {
-      title: 'Groen',
-      img: './assets/img/work/mockup-jij.png',
-      bg: './assets/img/work/bg-uncover-2.png',
-      company: 'Boerdam',
-      role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Provincie Overijssel',
-    }
-  ];
+  projects: any[];
 
 
 
-  constructor() { }
+  constructor(private service: ProjectsService) { }
 
   ngOnInit() {
     const observer = new MutationObserver(function(mutations) {
@@ -69,6 +37,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       });
     });
 
+    this.service.getProjects().subscribe(a => this.projects = a);
       // const target = this.el.nativeElement;
 
      // const target: Element = document.getElementById('owl-stage');

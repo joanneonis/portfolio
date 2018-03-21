@@ -14,6 +14,8 @@ import { NavComponent } from './nav/nav.component';
 import { HeadingsComponent } from './headings/headings.component';
 import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
+import { ProjectsService } from './projects.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,11 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     OwlModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

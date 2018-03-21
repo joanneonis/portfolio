@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { HeadingsComponent } from './headings/headings.component';
 import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
+import { ProjectsService } from './projects.service';
 
 const routes: Routes = [
   {
@@ -21,6 +22,13 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'projects/:title',
+    component: DetailComponent,
+    resolve: {
+      project: ProjectsService
+    }
   }
 ];
 

@@ -1,0 +1,62 @@
+[
+    {
+      "title": "Uncover",
+      "img": "./assets/img/work/mockup-uncover.png",
+      "bg": "./assets/img/work/bg-uncover-2.png",
+      "company": "Avans University of Applied Sciences",
+      "role": "Concept, Design, Frontend, Teamleader",
+      "client": "Noordbrabants museum",
+      "content-blocks": [{
+        "type": "text",
+        "content": "The Garden of Earthly Delights, een indrukwekkende serie beelden van de internationaal vermaarde (mode)fotograaf Tim Walker (Guilford, 1970). De imposante foto’s zijn geïnspireerd op de mysterieuze beeldtaal van Jheronimus Bosch."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/uncover1.png"
+      },{
+        "type": "text",
+        "content": "Onze opdracht was om een interactieve ervaring voor de Tim Walker expositie te maken. Deze ervaring moet gericht zijn op middelbare scholieren. Het moet de scholieren helpen zelfstandig kennis te laten maken met de kunstenaars en hun werk. Tevens moet het ze ook stimuleren om mede-scholieren te enthousiasmeren ook naar musea te gaan."
+      },{
+        "type": "youtube",
+        "content": "http://www.youtube.com/embed/jGMlcmAKK4U?rel=0&hd=1"
+      },{
+        "type": "youtube",
+        "content": "Om de leerlingen te teasen voor de ervaring die we hebben gecreëerd, hebben we meerdere korte teasers gemaakt waarin we in elke teaser steeds het verhaal hervatten, in een mysterieuze sfeer, waarbij aan het eind alleen de naam Uncover wordt bekend gemaakt. Deze teaser kan verspreid worden op social media en bij de laatste post kan ook de naam van de expositie vrijgegeven worden. "
+      },{
+        "type": "text",
+        "content": "Voor de ervaring in het museum hebben we een app gemaakt waarmee de leerlingen zelfstandig de betekenislagen achter de kunstwerken van Tim Walker kunnen onderzoeken. Dit doe je dan met behulp van de app Uncover, hierin gaan de leerlingen onbewust een kunstanalyse uitvoeren. Je krijgt 8 rondes waarin elke keer een andere “laag” wordt belicht. In deze rondes krijg je een (heel) kleine uitleg, een vraag die je moet beantwoorden in de vorm van tekenen, inspreken, typen en foto. Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden."
+      }
+    ]
+    },
+    {
+      "title": "Willeke",
+      "img": "./assets/img/work/mockup-marie.png",
+      "bg": "./assets/img/work/bg-uncover-2.png",
+      "company": "Avans University of Applied Sciences",
+      "role": "Concept, Design, Frontend, Teamleader",
+      "client": "Marie Willeke"
+    },
+    {
+      "title": "Heilersig",
+      "img": "./assets/img/work/mockup-heilersig.png",
+      "bg": "./assets/img/work/bg-uncover-2.png",
+      "company": "Freelance",
+      "role": "Concept, Design, Frontend, Teamleader",
+      "client": "Studie"
+    },
+    {
+      "title": "Groen",
+      "img": "./assets/img/work/mockup-jij.png",
+      "bg": "./assets/img/work/bg-uncover-2.png",
+      "company": "Boerdam",
+      "role": "Concept, Design, Frontend, Teamleader",
+      "client": "Provincie Overijssel"
+    },
+    {
+      "title": "Hendrik",
+      "img": "./assets/img/work/mockup-jij.png",
+      "bg": "./assets/img/work/bg-uncover-2.png",
+      "company": "Boerdam",
+      "role": "Concept, Willem, Frontend, Teamleader",
+      "client": "Henk Overijssel"
+    }
+  ]
