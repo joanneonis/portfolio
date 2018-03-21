@@ -11,8 +11,14 @@ body > svg {
   display: none;
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 @import 'settings/colors';
 @import 'settings/type';
+@import 'settings/sizes';
 @import 'mixins/handy';
 @import 'functions/colors';
 

@@ -1,5 +1,5 @@
 
-<div class="nav-logo">
+<div class="nav-logo" [routerLink]="'/'">
   <h1 class="h4">
     <span>J</span><span>O</span><span>A</span><span>N</span><span>N</span><span>E</span>
     <span>O</span><span>N</span><span>I</span><span>S</span>
@@ -17,7 +17,7 @@
       <div>
         <div></div>
           <ul class="nav-menu__list">
-              <li><a>Home</a></li>
+              <li><a [routerLink]="'/'">Home</a></li>
               <li><a>Over mij</a></li>
               <li><a data-coming-up="true">Playground</a></li>
             </ul>
@@ -30,37 +30,37 @@
       <div class="nav-menu__work">
           <ul>
             <li>
-              <a>
+              <a (click)="goto()">
                 <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
                 <span class="content">Uncover</span>
               </a>
             </li>
             <li>
-              <a>
+              <a [routerLink]="'/detail'">
                 <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
                 <span class="content">Heilersig</span>
               </a>
             </li>
             <li>
-              <a>
+              <a [routerLink]="'/detail'">
                 <span class="image"><img src="./assets/img/work/thumbs/jij.png" alt=""></span>
                 <span class="content">Jij</span>
               </a>
             </li>
             <li>
-              <a>
+              <a [routerLink]="'/detail'">
                 <span class="image"><img src="./assets/img/work/thumbs/marie.png" alt=""></span>
                 <span class="content">Marie</span>
               </a>
             </li>
             <li>
-                <a>
+                <a [routerLink]="'/detail'">
                   <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
                   <span class="content">Uncover</span>
                 </a>
               </li>
               <li>
-                <a>
+                <a [routerLink]="'/detail'">
                   <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
                   <span class="content">Heilersig</span>
                 </a>

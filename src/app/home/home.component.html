@@ -1,6 +1,7 @@
 <owl-carousel
      [options]="carouselOptions"
      [items]="images"
+     id="owlcontainer"
      [carouselClasses]="['owl-theme', 'row', 'sliding']" #owlElement>
      <div class="project" *ngFor="let image of images;let i = index" [attr.data-bg]="image.title">
        <div class="project-bg" [ngStyle]="{'background-image': 'url('+image.bg+')'}" ></div>

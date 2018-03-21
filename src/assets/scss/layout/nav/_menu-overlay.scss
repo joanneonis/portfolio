@@ -52,6 +52,8 @@
       a{
         font-family: $heading-font;
         font-size: 2.5em;
+        color: inherit;
+        text-decoration: none;
       }
     }
 
@@ -116,7 +118,6 @@ a[data-coming-up="true"] {
     float: left;
   }
   a {
-    background-image: url('/assets/img/menu.png');
     background-size: cover;
     display: inline-block;
     width: 100%;
@@ -125,6 +126,22 @@ a[data-coming-up="true"] {
     display: flex;
     align-items: center;
     padding-top: 30px;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    transition: background .2s;
+    background-color: rgba(black, 0);
+
+    &:hover{
+      background-color: rgba(black, .5);
+    }
+
+    &:after{
+      content: "";
+      @include abs(0);
+      background-image: url('/assets/img/menu.png');
+      z-index: -1;
+    }
   }
   .image {
     margin-bottom: -40px;

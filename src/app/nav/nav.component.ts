@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 // import * as Snap from 'snapsvg';
 // import Snap, { mina } from 'snapsvg-cjs';
 
@@ -13,7 +14,7 @@ export class NavComponent implements OnInit {
   navOpen = false;
   s = Snap(document.getElementById('bg'));
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -60,4 +61,12 @@ export class NavComponent implements OnInit {
     this.navOpen = !this.navOpen;
   }
 
+  goto() {
+    console.log('object');
+    this.router.navigate(['detail']);
+
+    setTimeout(() => {
+      this.open();
+    }, 100);
+  }
 }

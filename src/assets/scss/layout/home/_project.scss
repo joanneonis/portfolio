@@ -38,12 +38,16 @@
     backface-visibility: hidden;
   }
 
-  &-meta{
-    @include abs(auto, 20px, 30px, 20px);
+  .project-meta{
+    @include abs(auto, $main-sides, 30px, $main-sides);
     z-index: 20;
+  }
+
+  &-meta{
+
 
     &__inner{
-      margin-top: 12px;
+      margin-top: 11px;
     }
 
      div > div {
@@ -61,6 +65,7 @@
     span {
       line-height: 1.4;
       opacity: .81;
+      font-weight: 300;
     }
   }
 }

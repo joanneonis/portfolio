@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     autoplay: false,
     autoplayTimeout: 10000,
     loop: true,
-    onTranslate: this.onChange.bind(this),
+    onTranslated: this.onChange.bind(this),
   };
 
   images = [
@@ -29,20 +29,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
       client: 'Noordbrabants museum',
     },
     {
-      title: 'Uncover',
-      img: './assets/img/work/mockup-uncover.png',
+      title: 'Willeke',
+      img: './assets/img/work/mockup-marie.png',
       bg: './assets/img/work/bg-uncover-2.png',
       company: 'Avans University of Applied Sciences',
       role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Noordbrabants museum',
+      client: 'Marie Willeke',
     },
     {
-      title: 'Uncover',
-      img: './assets/img/work/mockup-uncover.png',
+      title: 'Heilersig',
+      img: './assets/img/work/mockup-heilersig.png',
       bg: './assets/img/work/bg-uncover-2.png',
-      company: 'Avans University of Applied Sciences',
+      company: 'Freelance',
       role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Noordbrabants museum',
+      client: 'Studie',
+    },
+    {
+      title: 'Groen',
+      img: './assets/img/work/mockup-jij.png',
+      bg: './assets/img/work/bg-uncover-2.png',
+      company: 'Boerdam',
+      role: 'Concept, Design, Frontend, Teamleader',
+      client: 'Provincie Overijssel',
     }
   ];
 
@@ -64,7 +72,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.el);
+    // console.log(this.el);
   }
 
   next() {
@@ -75,6 +83,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   onChange(e) {
+    console.log(e.item.index);
+  }
+
+  joooooo() {
+    // get translate
+    const el = document.getElementsByClassName('owl-stage')[0];
+    const matrix = new WebKitCSSMatrix(window.getComputedStyle(el).webkitTransform);
+   // console.log(window.getComputedStyle(el).transform);
+    console.log('translateX: ', matrix.m41);
   }
 
 }

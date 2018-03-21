@@ -1,0 +1,70 @@
+
+<header class="header">
+  <div class="header__inner">
+    <div class="header-img">
+      <img src="./assets/img/work/mockup-uncover.png" alt="">
+    </div>
+    <div class="header-details project-meta">
+      <h2 class="h2">{{image[0].title}}</h2>
+      <div class="project-meta__inner">
+          <div>
+            <h3 class="h5">Company</h3>
+            <span>{{image[0].company}}</span>
+          </div>
+          <div>
+            <h3 class="h5">Role</h3>
+            <span>{{image[0].role}}</span>
+          </div>
+          <div>
+            <h3 class="h5">Client</h3>
+            <span>{{image[0].client}}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="project-content">
+  <div class="project-content__inner">
+      <p>
+          Onze opdracht was om een interactieve ervaring voor de Tim Walker expositie te maken. Deze ervaring moet gericht zijn op middelbare scholieren. Het moet de scholieren helpen zelfstandig kennis te laten maken met de kunstenaars en hun werk. Tevens moet het ze ook stimuleren om mede-scholieren te enthousiasmeren ook naar musea te gaan.
+        </p>
+  <figure>
+    <img src="./assets/img/work/uncover1.png" alt="">
+    <caption>
+      <strong>Tim Walker expositie</strong>
+      <span>Bron: noordbrabantsmuseum.nl</span>
+    </caption>
+  </figure>
+  <p class="hightlight">The Garden of Earthly Delights, een indrukwekkende serie beelden van de internationaal vermaarde (mode)fotograaf Tim Walker (Guilford, 1970). De imposante foto’s zijn geïnspireerd op de mysterieuze beeldtaal van Jheronimus Bosch.</p>
+  <figure class="videoWrapper">
+      <iframe width="560" height="349" src="http://www.youtube.com/embed/jGMlcmAKK4U?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+    </figure>
+
+  <p>
+    Om de leerlingen te teasen voor de ervaring die we hebben gecreëerd, hebben we meerdere korte teasers gemaakt waarin we in elke teaser steeds het verhaal hervatten, in een mysterieuze sfeer, waarbij aan het eind alleen de naam Uncover wordt bekend gemaakt. Deze teaser kan verspreid worden op social media en bij de laatste post kan ook de naam van de expositie vrijgegeven worden.
+  </p>
+
+
+  <figure>
+      <img src="./assets/img/work/uncover-expo.png" alt="">
+    </figure>
+
+  <p>
+    Voor de ervaring in het museum hebben we een app gemaakt waarmee de leerlingen zelfstandig de betekenislagen achter de kunstwerken van Tim Walker kunnen onderzoeken. Dit doe je dan met behulp van de app Uncover, hierin gaan de leerlingen onbewust een kunstanalyse uitvoeren. Je krijgt 8 rondes waarin elke keer een andere “laag” wordt belicht. In deze rondes krijg je een (heel) kleine uitleg, een vraag die je moet beantwoorden in de vorm van tekenen, inspreken, typen en foto.
+<br><br>
+Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden.
+  </p>
+
+  <owl-carousel
+     [options]="carouselOptions"
+     [items]="images"
+     class="owl-work"
+     [carouselClasses]="['owl-theme', 'row', 'sliding']" #owlElement>
+     <div class="work-screens work-screens-mobile" *ngFor="let image of images;let i = index">
+        <img [src]="image.img" alt="">
+      </div>
+      <div></div>
+ </owl-carousel>
+  </div>
+</section>

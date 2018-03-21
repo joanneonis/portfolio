@@ -12,13 +12,15 @@ import { HomeComponent } from './home/home.component';
 import { OwlModule } from 'ngx-owl-carousel';
 import { NavComponent } from './nav/nav.component';
 import { HeadingsComponent } from './headings/headings.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent,
-    HeadingsComponent
+    HeadingsComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
