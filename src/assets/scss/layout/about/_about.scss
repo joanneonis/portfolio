@@ -6,6 +6,8 @@
   bottom: 0;
   align-items: center;
   padding: 0 30px;
+  background-image: url('/assets/img/work/bg-uncover-2.png');
+  background-size: cover;
 
   h3 {
     line-height: 1;
@@ -22,7 +24,7 @@
 }
 
 .about__inner > div:nth-child(2) {
-  margin-right: 10vw;
+  margin-right: 15vw;
 }
 
 .about__inner > div:nth-child(2):after {
@@ -37,7 +39,7 @@
 }
 
 .about__inner > div:nth-child(2) img {
-  width: 40vw;
+  width: 30vw;
   position: relative;
   z-index: 2;
 }

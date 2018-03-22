@@ -68,6 +68,11 @@
         font-size: 2.5em;
         color: inherit;
         text-decoration: none;
+        transition: color .2s;
+
+        &:not([data-coming-up="true"]):hover {
+          color: #b7b7b7;
+        }
       }
     }
 

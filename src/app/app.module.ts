@@ -16,6 +16,8 @@ import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsService } from './projects.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './loading/loading.component';
+import { CountToModule } from 'angular-count-to';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     HeadingsComponent,
     DetailComponent,
-    AboutComponent
+    AboutComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     OwlModule,
+    CountToModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ProjectsService],

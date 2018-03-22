@@ -1,0 +1,12 @@
+
+<div [class.hide]="hide" class="loading-container">
+  <!-- <div class="countdown" [attr.data-number]="count">
+    {{count}}%
+  </div> -->
+
+<div class="countdown">
+  <span [CountTo]="count.countTo" [from]="count.from" [duration]="count.duration"></span>%
+</div>
+  <h2>Loading</h2>
+  <h3>Portfolio</h3>
+</div>

@@ -57,7 +57,8 @@ export class DetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.project = this.route.snapshot.data['project'];
+   // this.project = this.route.snapshot.data['project'];
+    this.route.data.subscribe(a => this.project = a['project']);
   }
 
   safeURL(e) {

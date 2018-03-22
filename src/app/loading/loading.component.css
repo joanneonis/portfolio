@@ -1,0 +1,56 @@
+.loading-container{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-image: url('/assets/img/work/bg-uncover-2.png');
+  background-size: cover;
+  z-index: 9999;
+  font-family: 'baron_neueblack', serif;
+  text-align: center;
+}
+
+.hide{
+  transition: opacity .4s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.countdown{
+  color:#29329F;
+  font-size: 35vh;
+  position: absolute;
+  top: 0em;
+  bottom: 0;
+  left:0;
+  right: 0;
+  height: 43vh;
+  margin: auto;
+  text-align: center;
+}
+
+h2{
+  font-size: 9em;
+  letter-spacing: -0.04em;
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1.2em;
+  text-align: center;
+}
+
+h3{
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1.2em;
+  text-align: center;
+  top: 4em;
+}

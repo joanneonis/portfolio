@@ -8,6 +8,8 @@
       "client": "Noordbrabants museum",
       "type": "mobile",
       "color": "#2C527B",
+      "next": "Willeke",
+      "prev": "Archive",
       "url": "https://uncover-b9e48.firebaseapp.com/",
       "contentblocks": [{
         "type": "text",
@@ -33,12 +35,26 @@
         "content": "http://www.youtube.com/embed/jGMlcmAKK4U?rel=0&hd=1"
       },{
         "type": "text",
-        "content": "Voor de ervaring in het museum hebben we een app gemaakt waarmee de leerlingen zelfstandig de betekenislagen achter de kunstwerken van Tim Walker kunnen onderzoeken. Dit doe je dan met behulp van de app Uncover, hierin gaan de leerlingen onbewust een kunstanalyse uitvoeren. Je krijgt 8 rondes waarin elke keer een andere “laag” wordt belicht. In deze rondes krijg je een (heel) kleine uitleg, een vraag die je moet beantwoorden in de vorm van tekenen, inspreken, typen en foto. <br><br> Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden."
+        "content": "Voor de ervaring in het museum hebben we een app gemaakt waarmee de leerlingen zelfstandig de betekenislagen achter de kunstwerken van Tim Walker kunnen onderzoeken. Dit doe je dan met behulp van de app Uncover, hierin gaan de leerlingen onbewust een kunstanalyse uitvoeren. Je krijgt 8 rondes waarin elke keer een andere “laag” wordt belicht. In deze rondes krijg je een (heel) kleine uitleg, een vraag die je moet beantwoorden in de vorm van tekenen, inspreken, typen en foto.  "
+      },
+      {
+        "type": "image",
+        "content": "./assets/img/work/uncover-mockup-1.png "
+      },
+      {
+        "type": "text",
+        "content": "Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden."
+      },
+      {
+        "type": "text",
+        "content": "Technieken die gebruikt zijn: Firebase, Angular 5, SCSS, npm"
       }
     ]
     },
     {
       "title": "Willeke",
+      "next": "Heilersig",
+      "prev": "Uncover",
       "img": "./assets/img/work/mockup-marie.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Avans University of Applied Sciences",
@@ -65,11 +81,17 @@
     },{
         "type": "text",
         "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+      },
+      {
+        "type": "text",
+        "content": "Technieken die gebruikt zijn: Angular 2, SCSS, npm, Wordpress"
       }
   ]
     },
     {
       "title": "Heilersig",
+      "next": "Groen",
+      "prev": "Willeke",
       "img": "./assets/img/work/mockup-heilersig.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Freelance",
@@ -94,10 +116,16 @@
       {
         "type": "text",
         "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+      },
+      {
+        "type": "text",
+        "content": "Technieken die gebruikt zijn: Angular 5, SCSS, npm, Wordpress"
       }]
     },
     {
       "title": "Groen",
+      "next": "MVRDV",
+      "prev": "Heilersig",
       "img": "./assets/img/work/mockup-jij.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Boerdam",
@@ -129,10 +157,16 @@
       },{
         "type": "text",
         "content": "“Binnen en buiten verbinden, en handelen naar en met de werkelijkheid”, aldus voorzitter van de jury Guido Rijnja."
+      },
+      {
+        "type": "text",
+        "content": "Technieken die gebruikt zijn: C#, Angular 2, SCSS, npm"
       }]
     },
     {
       "title": "MVRDV",
+      "next": "Archive",
+      "prev": "Groen",
       "img": "./assets/img/work/mockup-mvrdv.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Boerdam",
@@ -146,21 +180,31 @@
         "content": "Winy Maas, Jacob van Rijs and Nathalie de Vries vormen samen dit architectenbureau uit Rotterdam en staat bekend om de opvallende en terugkerende elementen in de gebouwen. Multifunctionele gebouwen. Een opeenstapeling van blokken. Bijzondere combinaties van materialen. Kortom, lef voor experiment. Al hun projecten zijn exemplarisch, uitgesproken en gericht op een betere toekomst."
       },{
         "type": "image",
-        "content": "./assets/img/work/markthal2.jpg"
+        "content": "./assets/img/work/mvrdv.jpg"
       },{
         "type": "text",
-        "content": "Het USP van Berlinda is vooral de kwaliteit en de persoonlijke begeleiding. Ze volgt meerdere cursussen om haar begeleiding te verbeteren, en heeft persoonlijke aandacht voor iedere student. Dit heb ik geprobeerd ook zo op de website naar voren te brengen. Door goede fotografie in te zetten en de verschillende diensten goed aan te bieden."
+        "content": "Voor dit prachtige werk hebben we gekozen voor afbeeldingen die op volledige breedte worden getoont."
       },{
         "type": "image",
         "content": "./assets/img/work/mvrdv-mockup-2.png"
       },
       {
         "type": "text",
-        "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
-      }]
+        "content": "Zie hieronder onderdelen van het concept"
+      },
+      {
+        "type": "slider",
+        "content": ["./assets/img/work/mvrdv/1.png","./assets/img/work/mvrdv/2.png","./assets/img/work/mvrdv/3.png","./assets/img/work/mvrdv/4.png"]
+      },
+    {
+      "type": "text",
+      "content": "Technieken die gebruikt zijn: Angular 5, SCSS, npm"
+    }]
     },
     {
       "title": "Archive",
+      "next": "Uncover",
+      "prev": "MVRDV",
       "img": "./assets/img/work/mockup-archive-2.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Boerdam",
@@ -174,7 +218,7 @@
         "content": "MVRDV is een ‘research driven’ bureau met een schat aan archiefmateriaal en omvat de dossiers van alle gerealiseerde en niet gerealiseerde projecten uit de periode 1991 tot nu. Een ongekend, rijke bron voor de actuele architectuur- en ontwerpcultuur."
       },{
         "type": "image",
-        "content": "./assets/img/work/markthal2.jpg"
+        "content": "./assets/img/work/mvrdv.jpg"
       },{
         "type": "text",
         "content": "Het USP van Berlinda is vooral de kwaliteit en de persoonlijke begeleiding. Ze volgt meerdere cursussen om haar begeleiding te verbeteren, en heeft persoonlijke aandacht voor iedere student. Dit heb ik geprobeerd ook zo op de website naar voren te brengen. Door goede fotografie in te zetten en de verschillende diensten goed aan te bieden."

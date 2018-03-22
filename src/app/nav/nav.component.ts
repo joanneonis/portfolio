@@ -68,7 +68,6 @@ export class NavComponent implements OnInit {
   }
 
   goto(e) {
-    console.log('object');
     this.router.navigate([e]);
 
     setTimeout(() => {

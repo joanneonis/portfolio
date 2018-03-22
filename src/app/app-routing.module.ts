@@ -5,11 +5,16 @@ import { HeadingsComponent } from './headings/headings.component';
 import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsService } from './projects.service';
+import { LoadingComponent } from './loading/loading.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'loading',
+    component: LoadingComponent,
   },
   {
     path: 'headings',
