@@ -1,29 +1,69 @@
 
-<header class="header">
+<header class="header" [style.background]="project.color">
   <div class="header__inner">
-    <div [attr.type]="image[0].type" class="header-img" [attr.data-title]="image[0].title">
-      <img [src]="image[0].img" alt="">
+    <div [attr.type]="project.type" class="header-img" [attr.data-title]="project.title">
+      <img [src]="project.img" alt="">
     </div>
     <div class="header-details project-meta">
-      <h2 class="h2">{{image[0].title}}</h2>
+      <h2 class="h2">{{project.title}}</h2>
       <div class="project-meta__inner">
           <div>
             <h3 class="h5">Company</h3>
-            <span>{{image[0].company}}</span>
+            <span>{{project.company}}</span>
           </div>
           <div>
             <h3 class="h5">Role</h3>
-            <span>{{image[0].role}}</span>
+            <span>{{project.role}}</span>
           </div>
           <div>
             <h3 class="h5">Client</h3>
-            <span>{{image[0].client}}</span>
+            <span>{{project.client}}</span>
           </div>
       </div>
     </div>
   </div>
 </header>
 
+<section class="project-content">
+  <div class="project-content__inner">
+      <div [ngSwitch]="block.type" *ngFor="let block of project.contentblocks;let i = index">
+          <p *ngSwitchCase="'text'" [innerHtml]="block.content"></p>
+          <figure *ngSwitchCase="'image'">
+            <img [src]="block.content" alt="">
+            <caption *ngIf="block.captionTitle || block.captionText">
+              <strong *ngIf="block.captionTitle">{{block.captionTitle}}</strong>
+              <span *ngIf="block.captionText">{{block.captionText}}</span>
+            </caption>
+          </figure>
+          <figure *ngSwitchCase="'youtube'" class="videoWrapper">
+              <iframe width="560" height="349" [src]="safeURL(block.content)" frameborder="0" allowfullscreen></iframe>
+          </figure>
+          <div *ngSwitchCase="'slider'" class="owl-detail">
+              <div class="owl-detail__inner">
+                  <owl-carousel 
+                  [options]="carouselOptions"
+                  [items]="block.content"
+                  id="owlcontainer"
+                  [carouselClasses]="['owl-theme', 'row', 'sliding']" #owlElement>
+                  <div class="" *ngFor="let image of block.content; let i = index">
+                    <img [src]="image">
+                  </div>
+                  <div></div>
+              </owl-carousel>
+              </div>
+        </div>
+      </div>
+      <div *ngIf="project.url" class="project-banner" [style.background]="project.color">
+        <div class="project-banner__inner">
+            <span>Bekijk live:</span>
+            <a *ngIf="project.type === 'mobile'" [href]="project.url" class="btn btn-white">naar de app</a>
+            <a *ngIf="project.type !== 'mobile'" [href]="project.url" class="btn btn-white">naar de website</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!--
 <section class="project-content">
   <div class="project-content__inner">
       <p>
@@ -61,15 +101,5 @@ Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest ins
     </figure>
 
 
-  <!-- <owl-carousel
-     [options]="carouselOptions"
-     [items]="images"
-     class="owl-work"
-     [carouselClasses]="['owl-theme', 'row', 'sliding']" #owlElement>
-     <div class="work-screens work-screens-mobile" *ngFor="let image of images;let i = index">
-        <img [src]="image.img" alt="">
-      </div>
-      <div></div>
- </owl-carousel> -->
   </div>
-</section>
+</section> -->

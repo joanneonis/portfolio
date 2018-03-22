@@ -15,3 +15,18 @@
 }
 
 
+.project-content__inner .owl-detail {
+  padding-left: 15vw;
+  margin: 30px 0; 
+  overflow: hidden;
+
+  &__inner{
+    width: 120%;
+  }
+
+  .owl-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+

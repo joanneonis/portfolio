@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-
+  project: any;
   carouselOptions: any = {
-    items: 3,
+    items: 2,
     dots: false,
     navigation: false,
     autoplay: false,
@@ -54,10 +54,13 @@ export class DetailComponent implements OnInit {
   ];
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.data['project']);
+    this.project = this.route.snapshot.data['project'];
   }
 
+  safeURL(e) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(e);
+  }
 }

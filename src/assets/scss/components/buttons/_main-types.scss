@@ -1,18 +1,31 @@
 
 $btn-colors: (
     "primary": (
-        color: color(primary, 500),
+        bgcolor: color(primary, 500),
     ),
+    "white": (
+      bgcolor: #fff,
+      color: black
+    )
 );
 
 @each $person-name, $person-details in $btn-colors {
+  $bgcolor: map-get($person-details, 'bgcolor');
   $color: map-get($person-details, 'color');
 
   .btn-#{$person-name} {
-    background-color: $color;
+    background-color: $bgcolor;
+    color: $color;
+    opacity: 1;
 
-    &:hover{
-      background-color: lighten($color, 8%);
+    @if($color == '#fff'){
+      &:hover{
+        background-color: darken($bgcolor, 8%);
+      }
+    }@else{
+      &:hover{
+        background-color: lighten($bgcolor, 8%);
+      }
     }
   }
 }

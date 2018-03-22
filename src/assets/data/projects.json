@@ -6,24 +6,34 @@
       "company": "Avans University of Applied Sciences",
       "role": "Concept, Design, Frontend, Teamleader",
       "client": "Noordbrabants museum",
-      "content-blocks": [{
+      "type": "mobile",
+      "color": "#2C527B",
+      "url": "https://uncover-b9e48.firebaseapp.com/",
+      "contentblocks": [{
+        "type": "text",
+        "content": "Onze opdracht was om een interactieve ervaring voor de Tim Walker expositie te maken. Deze ervaring moet gericht zijn op middelbare scholieren. Het moet de scholieren helpen zelfstandig kennis te laten maken met de kunstenaars en hun werk. Tevens moet het ze ook stimuleren om mede-scholieren te enthousiasmeren ook naar musea te gaan."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/uncover1.png",
+        "captionTitle": "De expositie",
+        "captionText": "Bron: noordbrabantsmuseum.nl"
+      },{
         "type": "text",
         "content": "The Garden of Earthly Delights, een indrukwekkende serie beelden van de internationaal vermaarde (mode)fotograaf Tim Walker (Guilford, 1970). De imposante foto’s zijn geïnspireerd op de mysterieuze beeldtaal van Jheronimus Bosch."
       },{
         "type": "image",
-        "content": "./assets/img/work/uncover1.png"
-      },{
+        "content": "./assets/img/work/uncover-expo.png"
+      },
+      {
         "type": "text",
-        "content": "Onze opdracht was om een interactieve ervaring voor de Tim Walker expositie te maken. Deze ervaring moet gericht zijn op middelbare scholieren. Het moet de scholieren helpen zelfstandig kennis te laten maken met de kunstenaars en hun werk. Tevens moet het ze ook stimuleren om mede-scholieren te enthousiasmeren ook naar musea te gaan."
-      },{
+        "content": "Om de leerlingen te teasen voor de ervaring die we hebben gecreëerd, hebben we meerdere korte teasers gemaakt waarin we in elke teaser steeds het verhaal hervatten, in een mysterieuze sfeer, waarbij aan het eind alleen de naam Uncover wordt bekend gemaakt. Deze teaser kan verspreid worden op social media en bij de laatste post kan ook de naam van de expositie vrijgegeven worden. "
+      },
+      {
         "type": "youtube",
         "content": "http://www.youtube.com/embed/jGMlcmAKK4U?rel=0&hd=1"
       },{
-        "type": "youtube",
-        "content": "Om de leerlingen te teasen voor de ervaring die we hebben gecreëerd, hebben we meerdere korte teasers gemaakt waarin we in elke teaser steeds het verhaal hervatten, in een mysterieuze sfeer, waarbij aan het eind alleen de naam Uncover wordt bekend gemaakt. Deze teaser kan verspreid worden op social media en bij de laatste post kan ook de naam van de expositie vrijgegeven worden. "
-      },{
         "type": "text",
-        "content": "Voor de ervaring in het museum hebben we een app gemaakt waarmee de leerlingen zelfstandig de betekenislagen achter de kunstwerken van Tim Walker kunnen onderzoeken. Dit doe je dan met behulp van de app Uncover, hierin gaan de leerlingen onbewust een kunstanalyse uitvoeren. Je krijgt 8 rondes waarin elke keer een andere “laag” wordt belicht. In deze rondes krijg je een (heel) kleine uitleg, een vraag die je moet beantwoorden in de vorm van tekenen, inspreken, typen en foto. Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden."
+        "content": "Voor de ervaring in het museum hebben we een app gemaakt waarmee de leerlingen zelfstandig de betekenislagen achter de kunstwerken van Tim Walker kunnen onderzoeken. Dit doe je dan met behulp van de app Uncover, hierin gaan de leerlingen onbewust een kunstanalyse uitvoeren. Je krijgt 8 rondes waarin elke keer een andere “laag” wordt belicht. In deze rondes krijg je een (heel) kleine uitleg, een vraag die je moet beantwoorden in de vorm van tekenen, inspreken, typen en foto. <br><br> Vervolgens zie je wat anderen hebben geantwoord en kan je daar ook het meest inspirerende antwoord van kiezen, en krijg je een klein stukje literatuur dat gerelateerd is aan de vraag. Als alle stappen zijn doorlopen krijgt de leerling een remix te zien van alle antwoorden en kunstwerken die hij of zij heeft bekeken/gekozen als persoonlijke museum ervaring. Deze kan dan weer gedeeld worden op social media. Deze remix is ook weer in de stijl van de teaser, zodat als er leerlingen zijn die nieuwsgierig waren wat de voorafgaande teasers betekende die de herkenning ook weer terug zien in de remixen die gedeeld worden."
       }
     ]
     },
@@ -33,15 +43,58 @@
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Avans University of Applied Sciences",
       "role": "Concept, Design, Frontend, Teamleader",
-      "client": "Marie Willeke"
+      "client": "Marie Willeke",
+      "type": "web",
+      "color": "#F1CF8F",
+      "url": "http://mariewilleke.nl/",
+      "contentblocks": [{
+        "type": "text",
+        "content": "Marie zit in de paardenwereld, en ziet dat op dat gebied online nog veel te halen is. Ook over het paardenaanbod heeft ze veel ideeen. Dus om haar te helpen met het online gedeelte hebben we samen gezeten en er kwamen leuke gesprekken uit."
+      },
+    {
+      "type": "image",
+      "content": "./assets/img/work/marie-img.png"
+    },
+    {
+        "type": "text",
+        "content": "De website is nog niet live, i.v.m. haar verhuizing naar Duitsland. Maar de plannen liggen er nog en worden nog hervat. <br><br>Wat de website betreft heb ik al wat dingen kunnen toepassen. Een uniek onderdeel is bijvoorbeeld dat je in het overzicht de afbeeldingen kan filteren op hoofd, zijaanzicht en voorkant, zodat je de paarden makkelijk kan verleiden.<br><br>De foto’s zijn nu nog placeholders, maar ze gaat een fotograaf inhuren om het aanbod goed in beeld te brengen."
+    },
+    {
+      "type": "image",
+      "content": "./assets/img/work/mockup-marie-2.png"
+    },{
+        "type": "text",
+        "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+      }
+  ]
     },
     {
       "title": "Heilersig",
       "img": "./assets/img/work/mockup-heilersig.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Freelance",
-      "role": "Concept, Design, Frontend, Teamleader",
-      "client": "Studie"
+      "role": "Concept, Design, Frontend",
+      "client": "Berlinda Heilersig",
+      "type": "web",
+      "color": "#DF001C",
+      "url": "http://heilersig.joanneonis.nl",
+      "contentblocks": [{
+        "type": "text",
+        "content": "Berlinda Heilersig heeft een jong, energiek en persoonlijk gericht studiecentrum. Haar probleem was dat ze veel bounces had op haar website, en dat bezoekers niet lang bleven. Ze wou graag meer klanten online binnentrekken."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/berlinda.png"
+      },{
+        "type": "text",
+        "content": "Het USP van Berlinda is vooral de kwaliteit en de persoonlijke begeleiding. Ze volgt meerdere cursussen om haar begeleiding te verbeteren, en heeft persoonlijke aandacht voor iedere student. Dit heb ik geprobeerd ook zo op de website naar voren te brengen. Door goede fotografie in te zetten en de verschillende diensten goed aan te bieden."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/mockup-heilersig-2.png"
+      },
+      {
+        "type": "text",
+        "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+      }]
     },
     {
       "title": "Groen",
@@ -49,14 +102,92 @@
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Boerdam",
       "role": "Concept, Design, Frontend, Teamleader",
-      "client": "Provincie Overijssel"
+      "client": "Provincie Overijssel",
+      "type": "book",
+      "color": "#0AA8DD",
+      "url": "https://jijenoverijssel.nl/groen",
+      "contentblocks": [{
+        "type": "text",
+        "content": "JIJ&Overijssel heeft de Galjaardprijs 2016 gewonnen en is daarmee officieel dé parel van de publieke communicatie! Iets om ontzettend trots op te zijn!"
+      },{
+        "type": "image",
+        "content": "./assets/img/work/groen-cover.png"
+      },{
+        "type": "text",
+        "content": "De Provincie Overijssel slaat een brug tussen overheid en inwoners door te experimenteren met betrokkenheid en nieuwe vormen van democratie. Op deze manier probeert Overijssel een weg te vinden in het zoeken van een goede invulling van de participatiesamenleving. <br><br>We hebben een deliberatief experiment opgezet waarbij de inwoners hun ideeen om de omgeving groener te maken mochten aanbieden en kiezen. Er kwamen 27 prachtige initiatieven uit.<br><br> Voor het evenement en de campagne hebben we verschillende uitingen gemaakt, waarvan je er een paar ziet hier op deze pagina. <br><br>Met het doorkijkje hierboven heb ik de vorm van het initatief van het platform jijenoverijssel.nl genomen, en deze als een doorkijk van hoe het kan worden over de omgeving gelegd."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/groen.png"
+      },
+      {
+        "type": "text",
+        "content": "Ook hebben we presentatieschermen gemaakt die met een andere laptop of mobiel te besturen waren, en heb ik een boekje gemaakt waarin alle initatieven te vinden zijn, die ze bij binnenkomst kregen."
+      },
+      {
+        "type": "slider",
+        "content": ["./assets/img/work/groen/1.png","./assets/img/work/groen/2.png","./assets/img/work/groen/3.png","./assets/img/work/groen/4.png","./assets/img/work/groen/5.png","./assets/img/work/groen/6.png","./assets/img/work/groen/7.png"]
+      },{
+        "type": "text",
+        "content": "“Binnen en buiten verbinden, en handelen naar en met de werkelijkheid”, aldus voorzitter van de jury Guido Rijnja."
+      }]
     },
     {
-      "title": "Hendrik",
-      "img": "./assets/img/work/mockup-jij.png",
+      "title": "MVRDV",
+      "img": "./assets/img/work/mockup-mvrdv.png",
       "bg": "./assets/img/work/bg-uncover-2.png",
       "company": "Boerdam",
-      "role": "Concept, Willem, Frontend, Teamleader",
-      "client": "Henk Overijssel"
+      "role": "Concept, Design, Frontend",
+      "client": "MVRDV",
+      "type": "web",
+      "color": "#000",
+      "url": "https://",
+      "contentblocks": [{
+        "type": "text",
+        "content": "Winy Maas, Jacob van Rijs and Nathalie de Vries vormen samen dit architectenbureau uit Rotterdam en staat bekend om de opvallende en terugkerende elementen in de gebouwen. Multifunctionele gebouwen. Een opeenstapeling van blokken. Bijzondere combinaties van materialen. Kortom, lef voor experiment. Al hun projecten zijn exemplarisch, uitgesproken en gericht op een betere toekomst."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/markthal2.jpg"
+      },{
+        "type": "text",
+        "content": "Het USP van Berlinda is vooral de kwaliteit en de persoonlijke begeleiding. Ze volgt meerdere cursussen om haar begeleiding te verbeteren, en heeft persoonlijke aandacht voor iedere student. Dit heb ik geprobeerd ook zo op de website naar voren te brengen. Door goede fotografie in te zetten en de verschillende diensten goed aan te bieden."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/mvrdv-mockup-2.png"
+      },
+      {
+        "type": "text",
+        "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+      }]
+    },
+    {
+      "title": "Archive",
+      "img": "./assets/img/work/mockup-archive-2.png",
+      "bg": "./assets/img/work/bg-uncover-2.png",
+      "company": "Boerdam",
+      "role": "Design, Frontend",
+      "client": "MVRDV",
+      "type": "web",
+      "color": "#000",
+      "url": "http://",
+      "contentblocks": [{
+        "type": "text",
+        "content": "MVRDV is een ‘research driven’ bureau met een schat aan archiefmateriaal en omvat de dossiers van alle gerealiseerde en niet gerealiseerde projecten uit de periode 1991 tot nu. Een ongekend, rijke bron voor de actuele architectuur- en ontwerpcultuur."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/markthal2.jpg"
+      },{
+        "type": "text",
+        "content": "Het USP van Berlinda is vooral de kwaliteit en de persoonlijke begeleiding. Ze volgt meerdere cursussen om haar begeleiding te verbeteren, en heeft persoonlijke aandacht voor iedere student. Dit heb ik geprobeerd ook zo op de website naar voren te brengen. Door goede fotografie in te zetten en de verschillende diensten goed aan te bieden."
+      },{
+        "type": "image",
+        "content": "./assets/img/work/archive-mockup.png"
+      },
+      {
+        "type": "text",
+        "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+      }]
     }
   ]
+
+
+

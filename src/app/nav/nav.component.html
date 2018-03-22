@@ -29,42 +29,13 @@
       </div>
       <div class="nav-menu__work">
           <ul>
-            <li>
-              <a (click)="goto('/detail')">
-                <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
-                <span class="content">Uncover</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
-                <span class="content">Heilersig</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="image"><img src="./assets/img/work/thumbs/jij.png" alt=""></span>
-                <span class="content">Jij</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="image"><img src="./assets/img/work/thumbs/marie.png" alt=""></span>
-                <span class="content">Marie</span>
-              </a>
-            </li>
-            <li>
-                <a>
-                  <span class="image"><img src="./assets/img/work/thumbs/uncover.png" alt=""></span>
-                  <span class="content">Uncover</span>
+              <li *ngFor="let project of projects;let i = index">
+                <a (click)="goto('/+project.title+')">
+                  <span class="image"><img [src]="'./assets/img/work/thumbs/'+(project.title.toLowerCase())+'.png'" alt=""></span>
+                  <span class="content">{{project.title}}</span>
                 </a>
               </li>
-              <li>
-                <a>
-                  <span class="image"><img src="./assets/img/work/thumbs/heilersig.png" alt=""></span>
-                  <span class="content">Heilersig</span>
-                </a>
-              </li>
+
           </ul>
       </div>
       <ul class="nav-menu__social nav-menu__social__small">

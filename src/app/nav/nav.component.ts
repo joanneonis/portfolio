@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '
 import { Router } from '@angular/router';
 // import * as Snap from 'snapsvg';
 // import Snap, { mina } from 'snapsvg-cjs';
+import { ProjectsService } from '../projects.service';
+
 
 declare var Snap: any;
 declare var mina: any;
@@ -15,11 +17,12 @@ export class NavComponent implements OnInit {
   @ViewChild('bg') bg: ElementRef;
   s = Snap(document.getElementById('bg'));
   isNavOpen = false;
+  projects: any[];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: ProjectsService) { }
 
   ngOnInit() {
-
+    this.service.getProjects().subscribe(a => this.projects = a);
   }
 
   open() {
