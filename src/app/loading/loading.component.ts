@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./loading.component.css']
 })
 export class LoadingComponent implements OnInit {
+  hide;
+
   count = {
     countTo: 100,
     from: 0,
