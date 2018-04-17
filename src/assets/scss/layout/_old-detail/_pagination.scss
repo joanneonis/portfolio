@@ -1,0 +1,22 @@
+.pagination{
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+
+    .next, .prev {
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      font-family: $heading-font-bold;
+    }
+
+    img{
+      height: 15vw;
+      width: auto;
+      max-height: 120px;
+    }
+  }
+}

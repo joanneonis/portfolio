@@ -1,9 +1,21 @@
 
 body, html{
-  color: white;
   font-family: $body-font;
 }
 
 .type{
   margin-bottom: 0;
+}
+
+.type-lg {
+  font-size: 1.15em;
+  color: #3B3B3B;
+  letter-spacing: 0;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 1.8em;
+
+  @include bp(765px){
+    font-size: 1.7em;
+  }
 }

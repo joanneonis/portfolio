@@ -1,4 +1,9 @@
 
+app-home {
+  background-color: #313334;
+  color: #fff;
+}
+
 %image-bg{
   font-family: $heading-font-black;
   @include abs(0);
@@ -16,6 +21,10 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+
+  h2 {
+    font-size: 2em;
+  }
 
   &-bg{
     @include abs(0);

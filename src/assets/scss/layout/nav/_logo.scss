@@ -3,6 +3,7 @@
   top: 20px;
   left: $main-sides;
   z-index: 10;
+  color: white;
 
   @include bp(600px, max){
     left: $main-sides-xs;

@@ -9,11 +9,11 @@ $btn-colors: (
     )
 );
 
-@each $person-name, $person-details in $btn-colors {
-  $bgcolor: map-get($person-details, 'bgcolor');
-  $color: map-get($person-details, 'color');
+@each $btn-name, $btn-details in $btn-colors {
+  $bgcolor: map-get($btn-details, 'bgcolor');
+  $color: map-get($btn-details, 'color');
 
-  .btn-#{$person-name} {
+  .btn-#{$btn-name} {
     background-color: $bgcolor;
     color: $color;
     opacity: 1;

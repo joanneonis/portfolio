@@ -1,11 +1,20 @@
 
 <header class="header" [style.background]="project.color">
-  <div class="header__inner">
-    <div [attr.type]="project.type" class="header-img" [attr.data-title]="project.title">
-      <img [src]="project.img" alt="">
-    </div>
-    <div class="header-details project-meta">
-      <h2 class="h2">{{project.title}}</h2>
+  <div class="header__text" [attr.data-title]="project.title">
+    <span [style.color]="project.colorSecondary">{{project.title}}</span>
+  </div>
+  <div [attr.type]="project.type" class="header-img">
+    <img [src]="project.img" alt="">
+  </div>
+</header>
+
+<section class="project-content">
+  <div class="project-content__inner">
+      <h4>{{project.title}}</h4>
+      <p class="type-lg">
+          {{project.intro}}
+      </p>
+    <div class="project-meta">
       <div class="project-meta__inner">
           <div>
             <h3 class="h5">Company</h3>
@@ -22,7 +31,84 @@
       </div>
     </div>
   </div>
-</header>
+
+  <div [ngSwitch]="block.type" *ngFor="let block of project.contentblocks;let i = index">
+      <div class="block-type-text" *ngSwitchCase="'text'"><p class="type-lg" [innerHtml]="block.content"></p></div>
+      <div class="block-type-text block-type-text2" *ngSwitchCase="'text2'"><p class="type-lg" [innerHtml]="block.content"></p> <p [innerHtml]="block.contentLong"></p></div>
+      <figure class="img-wall" *ngSwitchCase="'image2'">
+        <img [src]="block.content" alt="">
+        <caption *ngIf="block.captionTitle || block.captionText">
+          <strong *ngIf="block.captionTitle">{{block.captionTitle}}</strong>
+          <span *ngIf="block.captionText">{{block.captionText}}</span>
+        </caption>
+      </figure>
+      <figure *ngSwitchCase="'image'">
+        <img [src]="block.content" alt="">
+        <caption *ngIf="block.captionTitle || block.captionText">
+          <strong *ngIf="block.captionTitle">{{block.captionTitle}}</strong>
+          <span *ngIf="block.captionText">{{block.captionText}}</span>
+        </caption>
+      </figure>
+      <figure *ngSwitchCase="'youtube'" class="videoWrapper">
+          <iframe width="560" height="349" [src]="safeURL(block.content)" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <div *ngSwitchCase="'slider'" class="owl-detail">
+          <div class="owl-detail__inner">
+              <owl-carousel
+              [options]="carouselOptions"
+              [items]="block.content"
+              id="owlcontainer"
+              [carouselClasses]="['owl-theme', 'row', 'sliding']" #owlElement>
+              <div class="" *ngFor="let image of block.content; let i = index">
+                <img [src]="image">
+              </div>
+              <div></div>
+          </owl-carousel>
+          </div>
+    </div>
+  </div>
+  <div *ngIf="project.url" class="project-banner" [style.background]="project.color">
+    <div class="project-banner__inner">
+        <span>Bekijk live </span>
+        <a *ngIf="project.type === 'mobile'" [href]="project.url" class="btn btn-white">naar de app</a>
+        <a *ngIf="project.type !== 'mobile'" [href]="project.url" class="btn btn-white">naar de website</a>
+    </div>
+  </div>
+
+
+  <div class="pagination">
+      <div class="pagination__inner">
+        <div [routerLink]="'/projects/'+project.prev" class="prev" [attr.data-title]="project.prev">
+          <span class=""><img [src]="'./assets/img/work/thumbs/'+(project.prev.toLowerCase())+'.png'" alt=""></span>
+          <span class="">
+              <i class="fas fa-long-arrow-alt-left"></i> Bekijk {{project.prev}}
+          </span>
+        </div>
+        <div class="menu" [routerLink]="'/'">
+          <svg width="60px" height="38px" viewBox="0 0 60 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="v4-mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                  <g id="Group-3-Copy" transform="translate(1.000000, 1.000000)" stroke="#000" stroke-width="2">
+                      <rect id="Rectangle-7" x="0" y="0" width="15" height="15"></rect>
+                      <rect id="Rectangle-7-Copy" x="0" y="21" width="15" height="15"></rect>
+                      <rect id="Rectangle-7" x="21.5" y="0" width="15" height="15"></rect>
+                      <rect id="Rectangle-7-Copy-2" x="21.5" y="21" width="15" height="15"></rect>
+                      <rect id="Rectangle-7" x="43" y="0" width="15" height="15"></rect>
+                      <rect id="Rectangle-7-Copy-3" x="43" y="21" width="15" height="15"></rect>
+                  </g>
+              </g>
+          </svg>
+          <span>home</span>
+        </div>
+        <div [routerLink]="'/projects/'+project.next" class="next" [attr.data-title]="project.next">
+          <span class=""><img [src]="'./assets/img/work/thumbs/'+(project.next.toLowerCase())+'.png'" alt=""></span>
+          <span class="">
+              Bekijk {{project.next}} <i class="fas fa-long-arrow-alt-right"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+</section>
+<!--
 
 <section class="project-content">
   <div class="project-content__inner">
@@ -88,7 +174,7 @@
         </div>
       </div>
   </div>
-</section>
+</section> -->
 
 <!--
 <section class="project-content">
