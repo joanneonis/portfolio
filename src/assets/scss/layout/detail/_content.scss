@@ -1,8 +1,36 @@
 
+@keyframes top{
+  0% {margin-top: 0vh;}
+  100% {margin-top: -15vh;}
+}
+@keyframes top2{
+  0% {margin-top: 10vh;}
+  100% {margin-top: 0;}
+}
+
+@keyframes top3{
+  0% {margin-top: 10vh;}
+  100% {margin-top: -30vh;}
+}
+
 .project-content{
   background: white;
   color: black;
-  padding-top: 5em;
+  margin-top: 0vh;
+
+  .open &{
+    animation: top .5s 2s ease-out;
+    animation-fill-mode: forwards;
+
+    @include bp(700px, max){
+      animation-name: top3;
+    }
+
+    .project-content__inner .type-lg{
+      animation: top2 .5s 2.2s ease-out;
+      animation-fill-mode: forwards;
+    }
+  }
 
   &__inner {
     overflow: hidden;
@@ -11,26 +39,57 @@
     text-align: center;
     padding-bottom: 5em;
 
+    .type-lg{
+      margin-top: 10vh;
+    }
+
     @include padding-text;
   }
 
   .project-meta{
     text-align: left;
-  }
+    z-index: 1;
 
-
-  .project-meta div > div {
-    float: none;
-  }
-
-  .project-meta__inner {
+    &__inner{
       display: flex;
       justify-content: space-around;
       font-size: 1.1em;
-  }
 
-  .project-meta div > div:last-of-type{
-    padding: 0;
+      @include bp(700px, max){
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+        font-size: 1em;
+      }
+    }
+
+    div > div {
+      float: none;
+
+      @include bp(700px, max){
+        display: block;
+        max-width: none;
+        padding: 0;
+
+        &:not(:last-of-type):after {
+          content: "";
+          width: 30%;
+          height: 1px;
+          background: #ececec;
+          display: block;
+          margin: 18px auto;
+        }
+      }
+
+      &:last-of-type{
+        padding: 0;
+
+        @include bp(700px, max){
+
+        }
+      }
+    }
   }
 
 h3.h5 {
@@ -46,3 +105,4 @@ figure {
   margin: 0;
 }
 }
+

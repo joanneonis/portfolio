@@ -18,6 +18,7 @@ import { ProjectsService } from './projects.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
 import { CountToModule } from 'angular-count-to';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CountToModule } from 'angular-count-to';
     HeadingsComponent,
     DetailComponent,
     AboutComponent,
-    LoadingComponent
+    LoadingComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

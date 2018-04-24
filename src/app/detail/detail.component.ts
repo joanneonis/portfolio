@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 @Component({
@@ -7,7 +7,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  project: any;
+  @Input() openProject;
+ // project: any;
   carouselOptions: any = {
     items: 2,
     dots: false,
@@ -41,24 +42,16 @@ export class DetailComponent implements OnInit {
     }
   ];
 
-  image = [
-    {
-      title: 'Willeke',
-      img: './assets/img/work/mockup-marie.png',
-      bg: './assets/img/work/bg-uncover-2.png',
-      company: 'Avans University of Applied Sciences',
-      role: 'Concept, Design, Frontend, Teamleader',
-      client: 'Marie Willeke',
-      type: 'web',
-    },
-  ];
-
 
   constructor(private route: ActivatedRoute, public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
    // this.project = this.route.snapshot.data['project'];
-    this.route.data.subscribe(a => this.project = a['project']);
+    // this.route.data.subscribe(a => this.project = a['project']);
+
+    // this.route.data.subscribe(function(e) {
+    //   console.log(e);
+    // });
   }
 
   safeURL(e) {

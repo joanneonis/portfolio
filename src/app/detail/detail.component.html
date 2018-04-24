@@ -1,38 +1,38 @@
 
-<header class="header" [style.background]="project.color">
+<!-- <header class="header" [style.background]="project.color">
   <div class="header__text" [attr.data-title]="project.title">
     <span [style.color]="project.colorSecondary">{{project.title}}</span>
   </div>
   <div [attr.type]="project.type" class="header-img">
     <img [src]="project.img" alt="">
   </div>
-</header>
+</header> -->
 
 <section class="project-content">
   <div class="project-content__inner">
-      <h4>{{project.title}}</h4>
+      <h4>{{openProject.project.title}}</h4>
       <p class="type-lg">
-          {{project.intro}}
+          {{openProject.project.intro}}
       </p>
     <div class="project-meta">
       <div class="project-meta__inner">
           <div>
             <h3 class="h5">Company</h3>
-            <span>{{project.company}}</span>
+            <span>{{openProject.project.company}}</span>
           </div>
           <div>
             <h3 class="h5">Role</h3>
-            <span>{{project.role}}</span>
+            <span>{{openProject.project.role}}</span>
           </div>
           <div>
             <h3 class="h5">Client</h3>
-            <span>{{project.client}}</span>
+            <span>{{openProject.project.client}}</span>
           </div>
       </div>
     </div>
   </div>
 
-  <div [ngSwitch]="block.type" *ngFor="let block of project.contentblocks;let i = index">
+  <div [ngSwitch]="block.type" *ngFor="let block of openProject.project.contentblocks;let i = index">
       <div class="block-type-text" *ngSwitchCase="'text'"><p class="type-lg" [innerHtml]="block.content"></p></div>
       <div class="block-type-text block-type-text2" *ngSwitchCase="'text2'"><p class="type-lg" [innerHtml]="block.content"></p> <p [innerHtml]="block.contentLong"></p></div>
       <figure class="img-wall" *ngSwitchCase="'image2'">
@@ -67,21 +67,21 @@
           </div>
     </div>
   </div>
-  <div *ngIf="project.url" class="project-banner" [style.background]="project.color">
+  <div *ngIf="openProject.project.url" class="project-banner" [style.background]="openProject.project.color">
     <div class="project-banner__inner">
         <span>Bekijk live </span>
-        <a *ngIf="project.type === 'mobile'" [href]="project.url" class="btn btn-white">naar de app</a>
-        <a *ngIf="project.type !== 'mobile'" [href]="project.url" class="btn btn-white">naar de website</a>
+        <a *ngIf="openProject.project.type === 'mobile'" [href]="openProject.project.url" class="btn btn-white">naar de app</a>
+        <a *ngIf="openProject.project.type !== 'mobile'" [href]="openProject.project.url" class="btn btn-white">naar de website</a>
     </div>
   </div>
 
 
-  <div class="pagination">
+  <!-- <div class="pagination">
       <div class="pagination__inner">
-        <div [routerLink]="'/projects/'+project.prev" class="prev" [attr.data-title]="project.prev">
-          <span class=""><img [src]="'./assets/img/work/thumbs/'+(project.prev.toLowerCase())+'.png'" alt=""></span>
+        <div [routerLink]="'/'+openProject.project.prev" class="prev" [attr.data-title]="openProject.project.prev">
+          <span class=""><img [src]="'./assets/img/work/thumbs/'+(openProject.project.prev.toLowerCase())+'.png'" alt=""></span>
           <span class="">
-              <i class="fas fa-long-arrow-alt-left"></i> Bekijk {{project.prev}}
+              <i class="fas fa-long-arrow-alt-left"></i> Bekijk {{openProject.project.prev}}
           </span>
         </div>
         <div class="menu" [routerLink]="'/'">
@@ -99,14 +99,14 @@
           </svg>
           <span>home</span>
         </div>
-        <div [routerLink]="'/projects/'+project.next" class="next" [attr.data-title]="project.next">
-          <span class=""><img [src]="'./assets/img/work/thumbs/'+(project.next.toLowerCase())+'.png'" alt=""></span>
+        <div [routerLink]="'/'+openProject.project.next" class="next" [attr.data-title]="openProject.project.next">
+          <span class=""><img [src]="'./assets/img/work/thumbs/'+(openProject.project.next.toLowerCase())+'.png'" alt=""></span>
           <span class="">
-              Bekijk {{project.next}} <i class="fas fa-long-arrow-alt-right"></i>
+              Bekijk {{openProject.project.next}} <i class="fas fa-long-arrow-alt-right"></i>
           </span>
         </div>
       </div>
-    </div>
+    </div> -->
 </section>
 <!--
 

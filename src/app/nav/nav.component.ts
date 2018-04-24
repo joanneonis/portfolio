@@ -41,24 +41,24 @@ export class NavComponent implements OnInit {
 
     if (!this.isNavOpen) {
       const toStep1 = function() {
-        step0.animate({ d: step1points }, 350, mina.linear, toStep2);
+        step0.animate({ d: step1points }, 450, mina.linear, toStep2);
       };
 
       const toStep2 = function() {
-        step0.animate({ d: step2points }, 350, mina.linear, toStep3);
+        step0.animate({ d: step2points }, 450, mina.linear, toStep3);
       };
 
       const toStep3 = function() {
-        step0.animate({ d: step3points }, 270, mina.linear);
+        step0.animate({ d: step3points }, 370, mina.linear);
       };
       toStep1();
       this.navOpen.emit(true);
     } else {
       const toStep1 = function() {
-        step0.animate({ d: step2points }, 150, mina.linear, back);
+        step0.animate({ d: step2points }, 250, mina.linear, back);
       };
       const back = function() {
-        step0.animate({ d: step9points }, 170, mina.linear);
+        step0.animate({ d: step9points }, 270, mina.linear);
       };
       toStep1();
       this.navOpen.emit(false);

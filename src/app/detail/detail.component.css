@@ -1,0 +1,10 @@
+
+.owl-detail__inner {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.owl-detail .owl-carousel .owl-item img {
+    height: 20vh;
+    width: auto;
+}

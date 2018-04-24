@@ -2,7 +2,7 @@
   position: absolute;
   top: 20px;
   left: $main-sides;
-  z-index: 10;
+  z-index: 11;
   color: white;
 
   @include bp(600px, max){

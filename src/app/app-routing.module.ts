@@ -29,8 +29,8 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'projects/:title',
-    component: DetailComponent,
+    path: ':title',
+    component: HomeComponent,
     resolve: {
       project: ProjectsService
     }
