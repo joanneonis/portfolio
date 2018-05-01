@@ -9,7 +9,6 @@
   background-image: url('/assets/img/work/bg-uncover-2.png');
   background-size: cover;
   color: white;
-  font-size: 1.13em;
 
   h3 {
     line-height: 1;
@@ -18,30 +17,35 @@
     font-weight: 300;
     font-size: 1.1em;
   }
+
+  .lead {
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+
+  & > div:nth-child(1) {
+    padding-left: 5vw;
+    padding-right: 50px;
+  }
+
+  &> div:nth-child(2) {
+    margin-right: 15vw;
+
+    &:after {
+      content: "";
+      @include abs(0,0,0,auto);
+      width: 32vw;
+      background: color(primary, 500);
+    }
+    img {
+      width: 30vw;
+      position: relative;
+      z-index: 2;
+    }
+  }
 }
 
-.about__inner > div:nth-child(1) {
-  padding-left: 5vw;
-  padding-right: 50px;
-}
 
-.about__inner > div:nth-child(2) {
-  margin-right: 15vw;
-}
 
-.about__inner > div:nth-child(2):after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  width: 32vw;
-  background: color(primary, 500);
-}
 
-.about__inner > div:nth-child(2) img {
-  width: 30vw;
-  position: relative;
-  z-index: 2;
-}
+

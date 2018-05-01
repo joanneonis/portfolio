@@ -1,0 +1,15 @@
+
+app-detail {
+    position: absolute;
+    top: 100vh;
+    z-index: 20;
+    height: 0;
+    overflow: hidden;
+    width: 100vw;
+}
+
+//detail overflow
+.open{
+  overflow: visible;
+  height: auto;
+}

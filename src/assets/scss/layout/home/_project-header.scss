@@ -1,0 +1,47 @@
+
+
+.project-header{
+  @include fxd(0);
+  z-index: 1;
+
+  h1{
+    @include abs(0);
+    transform: translateZ(-250px);
+    color: #262C75;
+    font-family: "baron_neueblack", serif;
+    margin: auto;
+    display: inline-block;
+    font-size: 20vw;
+    height: 20vw;
+    text-align: center;
+    color: #262C75;
+    z-index: 0;
+    letter-spacing: -1.07vw;
+    z-index: 10;
+    transform: none;
+
+    &.mock-title {
+      z-index: 60;
+      transform: none;
+      color: #1B4374;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      font-size: 287.8px;
+      position: absolute;
+      left: 50%;
+      top: 50vh;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%,-50%);
+      margin: 0;
+      width: 100vw;
+      height: 37vh;
+
+      span{
+        font-size: 21vw;
+      }
+    }
+  }
+
+  img{
+    z-index: 60;
+  }
+}

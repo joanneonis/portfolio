@@ -50,7 +50,7 @@
         </caption>
       </figure>
       <figure *ngSwitchCase="'youtube'" class="videoWrapper">
-          <iframe width="560" height="349" [src]="safeURL(block.content)" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="349" [src]="projectYoutube" frameborder="0" allowfullscreen></iframe>
       </figure>
       <div *ngSwitchCase="'slider'" class="owl-detail">
           <div class="owl-detail__inner">
@@ -62,9 +62,16 @@
               <div class="" *ngFor="let image of block.content; let i = index">
                 <img [src]="image">
               </div>
-              <div></div>
           </owl-carousel>
           </div>
+    </div>
+    <div *ngSwitchCase="'technique'" class="project-tech">
+      <div class="project-tech__inner">
+        <span>Gebruikte technieken</span>
+        <div class="project-tech__img" *ngFor="let image of block.content; let i = index">
+          <img [src]="'./assets/img/tech/'+image+'-bw.png'">
+        </div>
+      </div>
     </div>
   </div>
   <div *ngIf="openProject.project.url" class="project-banner" [style.background]="openProject.project.color">
@@ -76,9 +83,9 @@
   </div>
 
 
-  <!-- <div class="pagination">
+  <div class="pagination">
       <div class="pagination__inner">
-        <div [routerLink]="'/'+openProject.project.prev" class="prev" [attr.data-title]="openProject.project.prev">
+        <div (click)="paginate(''+openProject.project.prev+'')"  class="prev" [attr.data-title]="openProject.project.prev">
           <span class=""><img [src]="'./assets/img/work/thumbs/'+(openProject.project.prev.toLowerCase())+'.png'" alt=""></span>
           <span class="">
               <i class="fas fa-long-arrow-alt-left"></i> Bekijk {{openProject.project.prev}}
@@ -99,14 +106,14 @@
           </svg>
           <span>home</span>
         </div>
-        <div [routerLink]="'/'+openProject.project.next" class="next" [attr.data-title]="openProject.project.next">
+        <div (click)="paginate(''+openProject.project.next+'')" class="next" [attr.data-title]="openProject.project.next">
           <span class=""><img [src]="'./assets/img/work/thumbs/'+(openProject.project.next.toLowerCase())+'.png'" alt=""></span>
           <span class="">
               Bekijk {{openProject.project.next}} <i class="fas fa-long-arrow-alt-right"></i>
           </span>
         </div>
       </div>
-    </div> -->
+    </div>
 </section>
 <!--
 

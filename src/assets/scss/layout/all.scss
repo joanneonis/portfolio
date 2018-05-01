@@ -15,12 +15,10 @@
 @import 'nav/menu-overlay';
 
 @import 'home/project';
-
-// @import 'detail/header';
-// @import 'detail/content';
-// @import 'detail/slider';
-// @import 'detail/banner';
-// @import 'detail/pagination';
+@import 'home/header-animation';
+@import 'home/header-animation-helpers';
+@import 'home/project-header';
+@import 'home/detail';
 
 @import 'detail/header';
 @import 'detail/content';
@@ -30,6 +28,13 @@
 @import 'detail/pagination';
 @import 'detail/img-wall';
 @import 'detail/banner';
+@import 'detail/slider';
+@import 'detail/tech';
 
 @import 'about/about';
+
+
+
+
+
 

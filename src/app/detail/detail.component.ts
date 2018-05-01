@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 @Component({
@@ -8,6 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class DetailComponent implements OnInit {
   @Input() openProject;
+  @Output() paginated = new EventEmitter();
  // project: any;
   carouselOptions: any = {
     items: 2,
@@ -19,29 +20,7 @@ export class DetailComponent implements OnInit {
     margin: 20
   };
 
-  images = [
-    {
-      title: 'Home',
-      img: './assets/img/work/uncover-screens/home.png',
-    },
-    {
-      title: 'Info',
-      img: './assets/img/work/uncover-screens/info.png',
-    },
-    {
-      title: 'recording',
-      img: './assets/img/work/uncover-screens/record.png',
-    },
-    {
-      title: 'foto',
-      img: './assets/img/work/uncover-screens/foto.png',
-    },
-    {
-      title: 'teken',
-      img: './assets/img/work/uncover-screens/draw.png',
-    }
-  ];
-
+  projectYoutube;
 
   constructor(private route: ActivatedRoute, public sanitizer: DomSanitizer) { }
 
@@ -52,9 +31,16 @@ export class DetailComponent implements OnInit {
     // this.route.data.subscribe(function(e) {
     //   console.log(e);
     // });
+    const url = this.openProject.project.contentblocks.filter(a => a.type === 'youtube')[0].content;
+    this.projectYoutube = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  paginate(e) {
+    this.paginated.emit(e);
   }
 
   safeURL(e) {
+   // console.log('object');
     return this.sanitizer.bypassSecurityTrustResourceUrl(e);
   }
 }

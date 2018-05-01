@@ -42,6 +42,10 @@
       {
         "type": "image",
         "content": "./assets/img/work/uncover-expo.png"
+      },
+      {
+        "type": "technique",
+        "content": ["angular", "sass", "npm", "hammerjs"]
       }
     ]
     },
@@ -76,8 +80,8 @@
         "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
       },
       {
-        "type": "text",
-        "content": "Technieken die gebruikt zijn: Angular 2, SCSS, npm, WPrestapi, Wordpress"
+        "type": "technique",
+        "content": ["angular", "sass", "npm", "wp", "wp-rest"]
       }
   ]
     },
@@ -110,8 +114,8 @@
         "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
       },
       {
-        "type": "text",
-        "content": "Technieken die gebruikt zijn: Angular 5, SCSS, npm, Wordpress"
+        "type": "technique",
+        "content": ["angular", "sass", "npm", "wp"]
       }]
     },
     {
@@ -151,8 +155,8 @@
         "content": "“Binnen en buiten verbinden, en handelen naar en met de werkelijkheid”, aldus voorzitter van de jury Guido Rijnja."
       },
       {
-        "type": "text",
-        "content": "Technieken die gebruikt zijn: C#, Angular 2, SCSS, npm"
+        "type": "technique",
+        "content": ["csharp", "angular", "sass", "npm"]
       }]
     },
     {
@@ -188,8 +192,8 @@
         "content": ["./assets/img/work/mvrdv/1.png","./assets/img/work/mvrdv/2.png","./assets/img/work/mvrdv/3.png","./assets/img/work/mvrdv/4.png"]
       },
     {
-      "type": "text",
-      "content": "Technieken die gebruikt zijn: Angular 5, SCSS, npm"
+      "type": "technique",
+      "content": ["angular", "sass", "npm"]
     }]
     },
     {
@@ -211,14 +215,18 @@
         "content": "./assets/img/work/mvrdv.jpg"
       },{
         "type": "text",
-        "content": "Het USP van Berlinda is vooral de kwaliteit en de persoonlijke begeleiding. Ze volgt meerdere cursussen om haar begeleiding te verbeteren, en heeft persoonlijke aandacht voor iedere student. Dit heb ik geprobeerd ook zo op de website naar voren te brengen. Door goede fotografie in te zetten en de verschillende diensten goed aan te bieden."
+        "content": "Omdat elk project rijk aan content is, is het nog wel eens een uitdaging om te beheren. Hiervoor zochten ze een oplossing die makkelijk en intuitief werkt."
       },{
         "type": "image",
         "content": "./assets/img/work/archive-mockup.png"
       },
       {
         "type": "text",
-        "content": "De website vorm is een template voor Wordpress, hier heb ik voor gekozen zodat ze de website zelf makkelijk kan beheren, maar ook zodat ze andere partijen in kan schakelen om haar te helpen in de toekomst."
+        "content": "We hebben een oplossing gecreeerd waar niet alleen makkelijk mee te werken is, maar ook veelzijdig werkt. Zo is dit nu ook een plek geworden die direct correspondeerd met de website, en het archief zelf. Daarnaast is er ook extra aandacht gestoken in een snelle en krachtige zoekfunctie."
+      },
+      {
+        "type": "technique",
+        "content": ["angular", "sass", "npm", "elastics"]
       }]
     }
   ]

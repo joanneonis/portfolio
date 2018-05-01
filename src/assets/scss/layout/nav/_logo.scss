@@ -4,6 +4,7 @@
   left: $main-sides;
   z-index: 11;
   color: white;
+  cursor: pointer;
 
   @include bp(600px, max){
     left: $main-sides-xs;

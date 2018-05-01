@@ -1,4 +1,4 @@
-<div class="main-container" [class.nav-open]="navOpen">
+<div #container class="main-container" [class.nav-open]="navOpen">
 <app-nav (navOpen)="handleNavOpen($event)"></app-nav>
 <router-outlet></router-outlet>
 <!-- <div class="cursor"></div>

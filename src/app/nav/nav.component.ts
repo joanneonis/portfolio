@@ -15,23 +15,32 @@ export class NavComponent implements OnInit {
   @Output() navOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @ViewChild('bg') bg: ElementRef;
+  @ViewChild('bgL') bgL: ElementRef;
+
   s = Snap(document.getElementById('bg'));
+  s2 = Snap(document.getElementById('bgL'));
   isNavOpen = false;
   projects: any[];
+  windowTest;
+  svgSize = '.bg';
 
   constructor(private router: Router, private service: ProjectsService) { }
 
   ngOnInit() {
     this.service.getProjects().subscribe(a => this.projects = a);
+
+    this.windowTest = window.matchMedia('(min-width: 1440px)');
+    this.triggerAnimation(this.windowTest);
   }
 
   open() {
-    const mask = Snap.select('#mask');
-    const step0 = Snap.select('#step0');
-    const step1 = Snap.select('#step1');
-    const step2 = Snap.select('#step2');
-    const step3 = Snap.select('#step3');
-    const step9 = Snap.select('#step9');
+    console.log(this.svgSize + ' #mask', this.svgSize + ' #step0');
+    const mask = Snap.select(this.svgSize + ' #mask');
+    const step0 = Snap.select(this.svgSize + ' #step0');
+    const step1 = Snap.select(this.svgSize + ' #step1');
+    const step2 = Snap.select(this.svgSize + ' #step2');
+    const step3 = Snap.select(this.svgSize + ' #step3');
+    const step9 = Snap.select(this.svgSize + ' #step9');
 
     const step0points = step0.node.getAttribute('d');
     const step1points = step1.node.getAttribute('d');
@@ -74,4 +83,16 @@ export class NavComponent implements OnInit {
       this.open();
     }, 100);
   }
+
+  triggerAnimation(x) {
+    if (x.matches) {
+      this.svgSize = '.bg-lg';
+    } else {
+      this.svgSize = '.bg';
+    }
+  }
 }
+
+
+
+

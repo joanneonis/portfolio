@@ -1,0 +1,27 @@
+
+.project-tech__inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-tech__img img {
+  width: 100%;
+  height: auto;
+}
+
+.project-tech__img {
+  max-width: 110px;
+}
+
+.project-tech {
+  padding: 40px 0;
+}
+
+.project-tech__inner span {
+  text-transform: uppercase;
+  color: #ababab;
+  letter-spacing: 0.1px;
+}
