@@ -4,7 +4,7 @@ $btn-colors: (
         bgcolor: color(primary, 500),
     ),
     "white": (
-      bgcolor: #fff,
+      bgcolor: #fdfdfd,
       color: black
     )
 );
@@ -18,14 +18,12 @@ $btn-colors: (
     color: $color;
     opacity: 1;
 
-    @if($color == '#fff'){
-      &:hover{
-        background-color: darken($bgcolor, 8%);
-      }
-    }@else{
-      &:hover{
-        background-color: lighten($bgcolor, 8%);
-      }
+    &:hover{
+      background-color: lighten($bgcolor, 8%);
     }
   }
+}
+
+.btn-white:hover{
+  background: #eaeaea;
 }

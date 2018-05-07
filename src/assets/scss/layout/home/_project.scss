@@ -5,7 +5,7 @@ app-home {
 
   .owl-item {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     cursor: drag;
     cursor: -webkit-grab;
 
@@ -37,7 +37,7 @@ app-home {
   top: 0;
   z-index: 10;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 
   h2 {
     font-size: 2em;
@@ -76,11 +76,31 @@ app-home {
 
   &-header+.project-meta{
     @include abs(auto, $main-sides, 30px, $main-sides);
-    z-index: 20;
+    z-index: 2;
+
+    h2+p{
+        display: none;
+    }
 
     @include bp(600px, max){
       left: $main-sides-xs;
       right: $main-sides-xs;
+      text-align: center;
+      bottom: 8vh;
+
+      h2+p{
+        display: inline-block;
+        margin-top: 13.5px;
+        margin-bottom: 0.2em;
+        padding: 0 20px;
+      }
+
+      div>div:last-of-type {
+        float: none;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+      }
     }
   }
 

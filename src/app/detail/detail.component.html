@@ -34,7 +34,7 @@
 
   <div [ngSwitch]="block.type" *ngFor="let block of openProject.project.contentblocks;let i = index">
       <div class="block-type-text" *ngSwitchCase="'text'"><p class="type-lg" [innerHtml]="block.content"></p></div>
-      <div class="block-type-text block-type-text2" *ngSwitchCase="'text2'"><p class="type-lg" [innerHtml]="block.content"></p> <p [innerHtml]="block.contentLong"></p></div>
+      <div class="block-type-text block-type-text2" *ngSwitchCase="'text2'"><p class="type-lg" [innerHtml]="block.content"></p> <br> <p [innerHtml]="block.contentLong"></p></div>
       <figure class="img-wall" *ngSwitchCase="'image2'">
         <img [src]="block.content" alt="">
         <caption *ngIf="block.captionTitle || block.captionText">
@@ -68,8 +68,10 @@
     <div *ngSwitchCase="'technique'" class="project-tech">
       <div class="project-tech__inner">
         <span>Gebruikte technieken</span>
-        <div class="project-tech__img" *ngFor="let image of block.content; let i = index">
-          <img [src]="'./assets/img/tech/'+image+'-bw.png'">
+        <div class="tech_images">
+          <div class="project-tech__img" *ngFor="let image of block.content; let i = index">
+            <img [src]="'./assets/img/tech/'+image+'-bw.png'" [title]="image">
+          </div>
         </div>
       </div>
     </div>

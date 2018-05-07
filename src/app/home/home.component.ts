@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   slideActive = 0;
   slideIndex;
   slided;
+  autoplaySpeed = 200;
 
   detailOpen = false;
   activeProject;
@@ -139,7 +140,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   openProject(project) {
    // this.detailOpen = true;
     this.router.navigate([project]);
-
     // tslint:disable-next-line:no-shadowed-variable
       // console.log(that.activeProject.project.title, that.projects);
      // const that = this;
@@ -183,11 +183,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
       dots: false,
       navigation: false,
       autoplay: false,
-      autoplayTimeout: 10000,
+      autoplayTimeout: this.autoplaySpeed,
       loop: true,
       onChanged: this.onChange.bind(this),
       onInitialized: this.tilt.bind(this),
       startPosition: i
     };
+  }
+
+  stopSlider() {
+    this.owlElement.trigger('stop.owl.autoplay');
+    console.log('stopped the stupid slider');
   }
 }

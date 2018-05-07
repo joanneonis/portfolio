@@ -11,16 +11,19 @@ body > svg {
 }
 
 body {
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  // overflow: hidden;
 }
 
 .main-container{
-  overflow: auto;
-  width: 100%;
+  // overflow: auto;
+  // width: 100%;
+  // position: relative;
+  // height: 100vh;
+  // overflow-x: hidden;
+
+  min-height: 100vh;
   position: relative;
-  height: 100vh;
-  overflow-x: hidden;
 
   &.nav-open{
     overflow: hidden;

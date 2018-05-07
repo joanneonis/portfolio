@@ -37,7 +37,11 @@
     max-width: 850px;
     margin: auto;
     text-align: center;
-    padding-bottom: 5em;
+    padding-bottom: 2em;
+
+    @include bp(700px){
+      padding-bottom: 5em;
+    }
 
     .type-lg{
       margin-top: 10vh;

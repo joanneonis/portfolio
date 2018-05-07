@@ -1,15 +1,37 @@
 
-.owl-detail .owl-carousel .owl-item {
-  height: auto;
-  width: auto;
 
-  img {
+.owl-detail{
+  background: #f9f9fb;
+
+  .owl-carousel .owl-item {
     height: auto;
-    width: 100%;
+    width: auto;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
+
+  &__inner {
+    background: #f9f9fb;
+
+    @include bp(700px){
+      padding-left: 20px;
+    }
+  }
+
 }
 
-.owl-detail__inner {
-  background: #f9f9fb;
-  padding-left: 20px;
+[ng-reflect-ng-switch="slider"] .owl-carousel {
+  width: calc(100%);
+
+  @include bp(700px){
+    width: calc(100% + 2em);
+    margin-left: 2em;
+  }
+  @include bp(1500px){
+    width: 110%;
+    margin-left: 10%;
+  }
 }

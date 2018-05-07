@@ -14,10 +14,19 @@ export class DetailComponent implements OnInit {
     items: 2,
     dots: false,
     navigation: false,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 10000,
-    loop: false,
-    margin: 20
+    loop: true,
+    responsive : {
+      0 : {
+        items: 1,
+        margin: 0,
+      },
+      700 : {
+        margin: 20,
+        items: 2
+      }
+  }
   };
 
   projectYoutube;

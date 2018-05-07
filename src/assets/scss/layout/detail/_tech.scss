@@ -2,9 +2,14 @@
 .project-tech__inner {
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+
+  @include bp(700px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .project-tech__img img {
@@ -24,4 +29,17 @@
   text-transform: uppercase;
   color: #ababab;
   letter-spacing: 0.1px;
+  margin-right: 10px;
+
+  @include bp(700px, max){
+    margin-bottom: 1em;
+    display: inline-block;
+    margin-right: 0;
+  }
+}
+
+.tech_images{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

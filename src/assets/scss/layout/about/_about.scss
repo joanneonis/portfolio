@@ -1,4 +1,11 @@
 
+.about {
+  background-color: color(primary, 500);
+  width: 100%;
+  display: block;
+  height: 100vh;
+}
+
 .about__inner {
   display: flex;
   position: absolute;
@@ -26,6 +33,10 @@
   & > div:nth-child(1) {
     padding-left: 5vw;
     padding-right: 50px;
+
+    p {
+      max-width: 600px;
+    }
   }
 
   &> div:nth-child(2) {

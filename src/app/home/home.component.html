@@ -22,14 +22,15 @@
  </div>
  -->
 
- <div class="cus-owl-nav cus-owl-nav-prev" (click)="prevSlide()">
+ <div class="cus-owl-nav cus-owl-nav-prev" (click)="prev()">
     <svg height="50" width="50">
       <circle cx="25" cy="25" r="20" stroke="rgba(255,255,255, .24)" stroke-width="2" fill="transparent" />
+      <circle cx="25" cy="25" r="20" stroke="white" stroke-width="2" fill="transparent" />
     </svg>
     <i class="fas fa-long-arrow-alt-left"></i>
    </div>
 
-   <div class="cus-owl-nav cus-owl-nav-next" (click)="nextSlide()">
+   <div class="cus-owl-nav cus-owl-nav-next" (click)="next()">
     <svg height="50" width="50">
       <circle cx="25" cy="25" r="20" stroke="rgba(255,255,255, .24)" stroke-width="2" fill="transparent" />
       <circle cx="25" cy="25" r="20" stroke="white" stroke-width="2" fill="transparent" />
@@ -51,7 +52,7 @@
   <div class="project-header">
       <div class="animation-block-white"></div>
       <div [style.background]="activeProject.project?.color" class="animation-block"></div>
-      <h1 [style.color]="activeProject.project?.colorSecondary" class="mock-title"><span>{{image?.title}}</span></h1>
+      <h1 [style.color]="activeProject.project?.colorSecondary" class="mock-title"><span><span>{{image?.title | slice:0:1}}</span><span>{{image?.title | slice:1:100}}</span></span></h1>
      <h1>{{image?.title}}</h1>
      <img class="project-img" [src]="image.img" alt="">
  </div>
@@ -59,6 +60,7 @@
     <!-- <div class="thumbnail-image" [ngStyle]="{'background': 'url() no-repeat scroll center center / 80px 80px'}"></div> -->
    <div class="project-meta">
      <h2 class="h4">{{image.title}}</h2>
+     <p class="visible-xs">{{image.intro | slice:0:100 }}... </p>
      <div class="project-meta__inner">
          <div>
            <h3 class="h5">Company</h3>

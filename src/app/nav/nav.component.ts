@@ -24,6 +24,9 @@ export class NavComponent implements OnInit {
   windowTest;
   svgSize = '.bg';
 
+  isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
   constructor(private router: Router, private service: ProjectsService) { }
 
   ngOnInit() {
@@ -31,6 +34,11 @@ export class NavComponent implements OnInit {
 
     this.windowTest = window.matchMedia('(min-width: 1440px)');
     this.triggerAnimation(this.windowTest);
+    // this.windowTest.addListener(this.triggerAnimation);
+
+    if (this.isSafari) {
+      console.log('hello safari');
+    }
   }
 
   open() {

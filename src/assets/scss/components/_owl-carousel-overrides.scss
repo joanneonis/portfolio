@@ -26,6 +26,18 @@
     left: 20px;
     font-size: 0.8em;
   }
+
+  circle:nth-child(2) {
+    stroke-dasharray: 125;
+    stroke-dashoffset: -125; // goes til -250
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset .15s;
+  }
+
+  &:hover circle:nth-child(2){
+    stroke-dashoffset: 0;
+  }
 }
 
 .cus-owl-nav-next {
@@ -37,11 +49,7 @@
 }
 
   circle:nth-child(2) {
-    stroke-dasharray: 125;
-    stroke-dashoffset: -170; // goes til -250
-    transform: rotate(-90deg);
-    transform-origin: center;
-    animation: loader 10s cubic-bezier(0.51, 0.31, 0.51, 0.74) infinite;
+    // animation: loader 10s cubic-bezier(0.51, 0.31, 0.51, 0.74) infinite;
   }
 }
 

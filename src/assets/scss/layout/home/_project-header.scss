@@ -32,11 +32,22 @@
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%,-50%);
       margin: 0;
-      width: 100vw;
+      width: 100%;
       height: 37vh;
 
-      span{
-        font-size: 21vw;
+      > span{
+        font-size: 20vw;
+
+        @include bp(800px, max){
+          font-size: 100%;
+          display: inline-block;
+          position: relative;
+          top: -17vh;
+
+          > span:nth-child(2){
+            display: none;
+          }
+        }
       }
     }
   }
