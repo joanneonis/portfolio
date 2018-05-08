@@ -26,6 +26,9 @@ export class NavComponent implements OnInit {
 
   isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+  isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  isEdge = navigator.appVersion.indexOf('Edge') > -1;
+
 
   constructor(private router: Router, private service: ProjectsService) { }
 
@@ -39,10 +42,11 @@ export class NavComponent implements OnInit {
     if (this.isSafari) {
       console.log('hello safari');
     }
+
+    // To do (safari and firefox masking)
   }
 
   open() {
-    console.log(this.svgSize + ' #mask', this.svgSize + ' #step0');
     const mask = Snap.select(this.svgSize + ' #mask');
     const step0 = Snap.select(this.svgSize + ' #step0');
     const step1 = Snap.select(this.svgSize + ' #step1');
@@ -56,30 +60,39 @@ export class NavComponent implements OnInit {
     const step3points = step3.node.getAttribute('d');
     const step9points = step9.node.getAttribute('d');
 
-    if (!this.isNavOpen) {
-      const toStep1 = function() {
-        step0.animate({ d: step1points }, 450, mina.linear, toStep2);
-      };
+    if (this.isChrome) {
+      if (!this.isNavOpen) {
+        const toStep1 = function() {
+          step0.animate({ d: step1points }, 450, mina.linear, toStep2);
+        };
 
-      const toStep2 = function() {
-        step0.animate({ d: step2points }, 450, mina.linear, toStep3);
-      };
+        const toStep2 = function() {
+          step0.animate({ d: step2points }, 450, mina.linear, toStep3);
+        };
 
-      const toStep3 = function() {
-        step0.animate({ d: step3points }, 370, mina.linear);
-      };
-      toStep1();
-      this.navOpen.emit(true);
-    } else {
-      const toStep1 = function() {
-        step0.animate({ d: step2points }, 250, mina.linear, back);
-      };
-      const back = function() {
-        step0.animate({ d: step9points }, 270, mina.linear);
-      };
-      toStep1();
-      this.navOpen.emit(false);
+        const toStep3 = function() {
+          step0.animate({ d: step3points }, 370, mina.linear);
+        };
+        toStep1();
+        this.navOpen.emit(true);
+      } else {
+        const toStep1 = function() {
+          step0.animate({ d: step2points }, 250, mina.linear, back);
+        };
+        const back = function() {
+          step0.animate({ d: step9points }, 270, mina.linear);
+        };
+        toStep1();
+        this.navOpen.emit(false);
+      }
+    } else{
+      if (!this.isNavOpen) {
+        this.navOpen.emit(true);
+      } else{
+this.navOpen.emit(false);
+      }
     }
+
 
      this.isNavOpen = !this.isNavOpen;
   }

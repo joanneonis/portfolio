@@ -10,9 +10,11 @@
 }
 
 
+@import 'nav/settings';
 @import 'nav/logo';
 @import 'nav/nav-toggle';
 @import 'nav/menu-overlay';
+@import 'nav/not-compatible';
 
 @import 'home/project';
 @import 'home/header-animation';

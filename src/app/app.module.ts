@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
 import { CountToModule } from 'angular-count-to';
 import { ContainerComponent } from './container/container.component';
+import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ContainerComponent } from './container/container.component';
     CountToModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [ProjectsService],
+  providers: [ProjectsService, {provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

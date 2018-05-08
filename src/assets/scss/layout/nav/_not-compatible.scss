@@ -1,0 +1,21 @@
+
+.nav-menu__list li,
+.nav-menu__social li,
+.nav-menu__work li{
+  transition: opacity .5s;
+  opacity: 0;
+
+  .active &{
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 3{
+  .active .animation-timing-#{$i}{
+    @for $j from 1 through 10{
+    li:nth-child(#{$j}){
+      transition-delay: $aninimation-nav-duration + (.15s * $j);
+    }
+  }
+}
+}

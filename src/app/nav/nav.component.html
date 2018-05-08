@@ -12,24 +12,24 @@
     <div [ngClass]="isNavOpen ? 'active' : 'passive'" class="nav-menu__icon"></div>
 </div>
 
-<div class="nav-menu__overlay" [ngClass]="isNavOpen ? 'active' : 'passive'">
+<div class="nav-menu__overlay" [class.active]="isNavOpen" [class.not-compatible]="!isChrome">
   <div class="nav-menu__content">
     <div class="nav-menu__content__inner">
       <div>
         <div></div>
-          <ul class="nav-menu__list">
+          <ul class="nav-menu__list animation-timing-1">
               <li><a (click)="goto('/')">Home</a></li>
               <li><a (click)="goto('about')">Over mij</a></li>
               <li><a data-coming-up="true">Playground</a></li>
             </ul>
-            <ul class="nav-menu__social">
+            <ul class="nav-menu__social animation-timing-2">
               <li><a href="https://dribbble.com/joanneonis"><i class="fab fa-dribbble"></i></a></li>
               <li><a href="https://www.linkedin.com/in/joanneonis"><i class="fab fa-linkedin-in"></i></a></li>
               <li><a href="mailto:joanneonis@gmail.com"><i class="fas fa-at"></i></a></li>
             </ul>
       </div>
       <div class="nav-menu__work">
-          <ul>
+          <ul class="animation-timing-3">
               <li *ngFor="let project of projects;let i = index">
                 <a (click)="goto('/' + project.title)">
                   <span class="image"><img [src]="'./assets/img/work/thumbs/'+(project.title.toLowerCase())+'.png'" alt=""></span>

@@ -1,17 +1,31 @@
 
 .nav-menu__overlay{
-  background-color: color(primary, 500);
   @include fxd(0);
   height: 100vh;
   width: 100vw;
   z-index: 60;
   color: white;
-  clip-path: url(#maskRect1);
-  -webkit-clip-path: url(#maskRect1);
 
-  @include bp(1440px){
-    clip-path: url(#maskRect2);
-    -webkit-clip-path: url(#maskRect2);
+  &:not(.not-compatible){
+    clip-path: url('#maskRect1');
+    -webkit-clip-path: url('#maskRect1');
+    background-color: color(primary, 500);
+
+    @include bp(1440px){
+      clip-path: url(#maskRect2);
+      -webkit-clip-path: url(#maskRect2);
+    }
+  }
+
+  &.not-compatible{
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s;
+
+    &.active{
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 
   @include bp(600px, max){
@@ -19,17 +33,25 @@
   }
 }
 
-@supports not(-webkit-clip-path: url(#maskRect1)) {
-  .nav-menu__overlay{
-    display: none;
-  }
-}
+// @supports not(-webkit-clip-path: url(#maskRect1)) {
+//   .nav-menu__overlay{
+//     display: none;
+//   }
+// }
 
 .nav-menu__bg{
   @include fxd(0);
   height: 100vh;
   width: 100vw;
   z-index: 50;
+
+  .not-compatible &{
+    background-color: color(primary, 500, 0);
+    transition: background .5s .2s;
+  }
+  .active.not-compatible &{
+    background-color: color(primary, 500, .95);
+  }
 
   svg{
     @include fxd(0);
