@@ -2,10 +2,14 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 import { OwlCarousel } from 'ngx-owl-carousel';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import 'tilt.js';
 import * as $ from 'jquery';
 import { ProjectsService } from '../projects.service';
+import { Observable } from 'rxjs/Observable';
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +19,8 @@ import { ProjectsService } from '../projects.service';
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('owlElement') owlElement: OwlCarousel;
   @ViewChild('.owl-stage') el: ElementRef;
+
+  owlReady$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   slideActive = 0;
   slideIndex;
@@ -42,41 +48,59 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.updateCarousel(0);
 
     // this.service.getProjects().subscribe(a => this.projects = a);
-    this.service.getProjects().subscribe(function(a) {
+    this.service.getProjects().subscribe((a) => {
       that.projects = a;
       that.slideActive = a.findIndex(x => x.title === (that.activeProject.project.title));
-      console.log(this.slideActive);
+      // console.log(that.slideActive);
       that.updateCarousel(that.slideActive);
     });
 
-    this.route.data.subscribe(function(e) {
-      that.activeProject = e;
+    this.route.data.subscribe((e) => {
+      this.activeProject = e;
       // console.log('route', e.project);
       // console.log(that.slideActive);
-
+      // console.log(that.owlElement);
       // console.log('routed', that.projects);
+      // console.log('Hai');
+      this.owlReady$.subscribe(a => {
+        // console.log(e.project.title, 'this is it');
+        // console.log(this.owlElement);
+        // console.log(this.projects);
+        if (this.projects) {
+          const test = this.projects.findIndex(x => x.title === (e.project.title));
+          this.owlElement.trigger('to.owl.carousel', [test]);
+        }
 
+      });
+
+      // o.subscribe(a => console.log(a));
       // if () {
       //   that.slideActive = that.projects.findIndex(x => x.title === (that.activeProject.project.title));
       // }
       if (e.project) {
         that.detailOpen = true;
-      //  console.log('set true', that.detailOpen);
+        //  console.log('set true', that.detailOpen);
       } else {
         that.detailOpen = false;
-      //  console.log('set false', that.detailOpen);
+        //  console.log('set false', that.detailOpen);
       }
+
+
+      // this.router.navigate([e.project.title]);
+      // this.slideActive = this.projects.findIndex(x => x.title === (e.project.title));
+      // console.log('paginated info', e, this.slideActive);
+      // this.owlElement.trigger('to.owl.carousel', [this.slideActive]);]
     });
 
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutationRecord) {
-          console.log('style changed!');
+    const observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutationRecord) {
+        console.log('style changed!');
       });
     });
 
-      // const target = this.el.nativeElement;
+    // const target = this.el.nativeElement;
 
-     // const target: Element = document.getElementById('owl-stage');
+    // const target: Element = document.getElementById('owl-stage');
     // observer.observe(target, { attributes : true, attributeFilter : ['style'] });
 
     $('.tilt-effect').tilt({
@@ -89,7 +113,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-   // console.log('ngAfterViewInit');
+    // console.log('ngAfterViewInit');
+    console.log('after');
   }
 
   next() {
@@ -101,15 +126,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   onChange(e) {
     let slide = e.item.index - e.relatedTarget._clones.length / 2 % e.item.count;
-   this.slideActive = e.item.index;
-   this.routet(this.slideActive);
 
-     if (this.detailOpen && !isNaN(slide) && this.projects) {
+    this.slideActive = e.item.index;
+    this.routet(this.slideActive);
+
+    // console.log(`SLIDE ${slide}`);
+
+    if (this.detailOpen && !isNaN(slide) && this.projects) {
       // weird bug
       if (slide === 6) {
         slide = 0;
       }
-      this.router.navigate([this.projects[slide].title]);
+      const proj = this.projects[slide];
+      if (proj) {
+        this.router.navigate([this.projects[slide].title]);
+      }
     }
   }
 
@@ -121,12 +152,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     // get translate
     const el = document.getElementsByClassName('owl-stage')[0];
     const matrix = new WebKitCSSMatrix(window.getComputedStyle(el).webkitTransform);
-   // console.log(window.getComputedStyle(el).transform);
-    // console.log('translateX: ', matrix.m41);
+
   }
 
   tilt() {
-    $('.tilt-effect').each(function(i, obj) {
+    $('.tilt-effect').each(function (i, obj) {
       $(this).tilt({
         glare: false,
         maxTilt: 5,
@@ -138,14 +168,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   openProject(project) {
-   // this.detailOpen = true;
+    // this.detailOpen = true;
     this.router.navigate([project]);
     // tslint:disable-next-line:no-shadowed-variable
-      // console.log(that.activeProject.project.title, that.projects);
-     // const that = this;
-//      const pos = that.projects.map(function(e) { return e.title; }).indexOf(that.activeProject.project.title);
-      // const index = that.projects.findIndex(that.activeProject.project); // x.title === that.activeProject.project.title
-      // console.log('index is:', pos);
+    // console.log(that.activeProject.project.title, that.projects);
+    // const that = this;
+    //      const pos = that.projects.map(function(e) { return e.title; }).indexOf(that.activeProject.project.title);
+    // const index = that.projects.findIndex(that.activeProject.project); // x.title === that.activeProject.project.title
+    // console.log('index is:', pos);
 
   }
 
@@ -167,14 +197,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
+  slideProject(e) {
+    this.slideActive = this.projects.findIndex(x => x.title === (e));
+    // console.log('paginated info', e, this.slideActive);
+
+
+    this.owlElement.to([this.slideActive]);
+  }
+
   paginated(e) {
     const that = this;
     this.router.navigate(['/' + e]);
-    this.slideActive = this.projects.findIndex(x => x.title === (e));
-    console.log('paginated info', e, this.slideActive);
-
-
-    this.owlElement.trigger('to.owl.carousel', [this.slideActive]);
+    this.slideProject(e);
   }
 
   updateCarousel(i) {
@@ -186,13 +220,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
       autoplayTimeout: this.autoplaySpeed,
       loop: true,
       onChanged: this.onChange.bind(this),
-      onInitialized: this.tilt.bind(this),
+      onInitialized: this.startSlide.bind(this),
       startPosition: i
     };
   }
 
+  startSlide(e) {
+    // this.owlReady$.next(true);
+    // this.owlElement.trigger('to.owl.carousel', [e]);
+  }
+
   stopSlider() {
     this.owlElement.trigger('stop.owl.autoplay');
-    console.log('stopped the stupid slider');
+    // console.log('stopped the stupid slider');
   }
 }

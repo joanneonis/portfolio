@@ -1,17 +1,20 @@
 
-.nav-menu__list li,
-.nav-menu__social li,
-.nav-menu__work li{
+.not-compatible .nav-menu__list li,
+.not-compatible .nav-menu__social li,
+.not-compatible .nav-menu__work li{
   transition: opacity .5s;
   opacity: 0;
-
-  .active &{
-    opacity: 1;
-  }
 }
 
+.not-compatible.active .nav-menu__list li,
+.not-compatible.active .nav-menu__social li,
+.not-compatible.active .nav-menu__work li{
+  opacity: 1;
+}
+
+
 @for $i from 1 through 3{
-  .active .animation-timing-#{$i}{
+  .not-compatible.active .animation-timing-#{$i}{
     @for $j from 1 through 10{
     li:nth-child(#{$j}){
       transition-delay: $aninimation-nav-duration + (.15s * $j);
